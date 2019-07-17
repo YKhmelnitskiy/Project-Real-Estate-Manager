@@ -1,0 +1,28 @@
+{
+    "release": {
+        "id": "acs2017_5yr",
+        "name": "ACS 2017 5-year",
+        "years": "2013-2017"
+    },
+    "tables": {
+        "B19058": {
+            "title": "Public Assistance Income or Food Stamps/SNAP in the Past 12 Months for Households",
+            "universe": "Households",
+            "denominator_column_id": "B19058001",
+            "columns": {
+                "B19058001": {
+                    "name": "Total:",
+                    "indent": 0
+                },
+                "B19058002": {
+                    "name": "With cash public assistance or Food Stamps/SNAP",
+                    "indent": 1
+                },
+                "B19058003": {
+                    "name": "No cash public assistance or Food Stamps/SNAP",
+                    "indent": 1
+                }
+            }
+        }
+    }
+}
