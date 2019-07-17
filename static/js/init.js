@@ -91,11 +91,11 @@ var $wrapper = $(".wrapper");
 var droopy = function(){
 	
 	/*Counter Animation*/
-	var counterAnim = $('.counter-anim');
-	if( counterAnim.length > 0 ){
-		counterAnim.counterUp({ delay: 10,
-        time: 1000});
-	}
+	// var counterAnim = $('.counter-anim');
+	// if( counterAnim.length > 0 ){
+	// 	counterAnim.counterUp({ delay: 10,
+    //     time: 1000});
+	// }
 	
 	/*Tooltip*/
 	if( $('[data-toggle="tooltip"]').length > 0 )
