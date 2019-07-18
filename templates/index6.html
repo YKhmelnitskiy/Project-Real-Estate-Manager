@@ -14,14 +14,13 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Data table CSS -->
-    <link href="../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+    
     <!-- Toast CSS -->
-    <link href="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="../full-width-light/dist/css/style.css" rel="stylesheet" type="text/css">
-
+    <link href="{{ url_for('static', filename='dist/css/style.css') }}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -220,7 +219,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span></span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span>{{count}}</span>
                                                     <span class="weight-500 uppercase-font block font-13">All Properties</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
@@ -431,52 +430,52 @@
     <!-- JavaScript -->
 
     <!-- jQuery -->
-    <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- Data table JavaScript -->
-    <script src="../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 
     <!-- Slimscroll JavaScript -->
-    <script src="../full-width-light/dist/js/jquery.slimscroll.js"></script>
+    <script src="{{ url_for('static', filename='dist/js/jquery.slimscroll.js') }}"></script>
 
     <!-- simpleWeather JavaScript -->
-    <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
-    <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
-    <script src="../full-width-light/dist/js/simpleweather-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dist/js/simpleweather-data.js') }}"></script>
 
     <!-- EChartJS JavaScript -->
-    <script src="../vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
-    <script src="../vendors/echarts-liquidfill.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/echarts-liquidfill.min.js') }}"></script>
 
     <!-- Progressbar Animation JavaScript -->
-    <script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
 
     <!-- Fancy Dropdown JS -->
-    <script src="../full-width-light/dist/js/dropdown-bootstrap-extended.js"></script>
+    <script src="{{ url_for('static', filename='dist/js/dropdown-bootstrap-extended.js') }}"></script>
 
     <!-- Sparkline JavaScript -->
     <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
 
     <!-- Owl JavaScript -->
-    <script src="../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
 
     <!-- Toast JavaScript -->
     <!-- <script src="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
 
     <!-- Piety JavaScript -->
-    <script src="../vendors/bower_components/peity/jquery.peity.min.js"></script>
-    <script src="../full-width-light/dist/js/peity-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dist/js/peity-data.js') }}"></script>
 
     <!-- Switchery JavaScript -->
-    <script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
 
     <!-- Init JavaScript -->
-    <script src="../full-width-light/dist/js/init.js"></script>
-    <script src="../full-width-light/dist/js/dashboard6-data.js"></script>
+    <script src="{{ url_for('static', filename='dist/js/init.js') }}"></script>
+    <script src="{{ url_for('static', filename='dist/js/dashboard6-data.js') }}"></script>
 </body>
 
 </html>
