@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Real Estate CRM</title>
+	<meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="hencework"/>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Data table CSS -->
+    <link href="../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Toast CSS -->
+    <link href="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+	<link href="../full-width-light/dist/css/style.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div class="preloader-it">
+		<div class="la-anim-1"></div>
+	</div>
+	<!-- /Preloader -->
+    <div class="wrapper  theme-5-active pimary-color-green">
+		<!-- Top Menu Items -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="mobile-only-brand pull-left">
+                <div class="nav-header pull-left">
+                    <div class="logo-wrap">
+                        <a href="index.html">
+                            <img class="brand-img" src="../img/logo.png" alt="brand" />
+                            <span class="brand-text">RealEZ</span>
+                        </a>
+                    </div>
+                </div>
+                <a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu"></i></a>
+                <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
+                <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+                <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+                    <div class="input-group">
+                        <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+						<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+						</span>
+                    </div>
+                </form>
+            </div>
+            <div id="mobile_only_nav" class="mobile-only-nav pull-right">
+                <ul class="nav navbar-right top-nav pull-right">
+                    
+                </ul>
+            </div>
+        </nav>
+		<!-- /Top Menu Items -->
+		
+		<!-- Left Sidebar Menu -->
+		<div class="fixed-sidebar-left">
+            <ul class="nav navbar-nav side-nav nicescroll-bar">
+                <li class="navigation-header">
+                    <span>Main</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+                <li>
+                    <a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="dashboard_dr" class="collapse collapse-level-1">
+						<li>
+							<a class="active-page" href="index6.html">General Dashboard</a>
+						</li>
+						<li>
+                            <a href="index.html">Personal Dashboard</a>
+                        </li>
+
+                        
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">Apps </span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="app_dr" class="collapse collapse-level-1">
+                        <li>
+                            <a href="chats.html">chats</a>
+                        </li>
+                        <li>
+                            <a href="calendar.html">calendar</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="email_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="inbox.html">inbox</a>
+                                </li>
+                                <li>
+                                    <a href="inbox-detail.html">detail email</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="contact_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="contact-list.html">list</a>
+                                </li>
+                                <li>
+                                    <a href="contact-card.html">cards</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="file-manager.html">File Manager</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <hr class="light-grey-hr mb-10" />
+                </li>
+                <li class="navigation-header">
+                    <span>component</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#form_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-edit mr-20"></i><span class="right-nav-text">Forms</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
+                        <li>
+                            <a href="form-layout.html">Customer Form</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
+							<li>
+								<a href="basic-table.html">Machine Learning</a>
+							</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+		<!-- /Left Sidebar Menu -->
+
+        <!-- Main Content -->
+		<div class="page-wrapper">
+            <div class="container-fluid pt-25">
+
+                <!-- Row -->
+                
+                <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default card-view  pa-0">
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body pa-0">
+                                        <div class="mail-box">
+                                            <div class="row">
+                                                <aside class="col-lg-3 col-md-4 pr-0">
+                                                    <div class="mt-20 mb-20 ml-15 mr-15">
+                                                        <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-success btn-block">
+                                                        Compose
+                                                        </a>
+                                                        <!-- Modal -->
+                                                        <div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                                        <h4 class="modal-title">Compose</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form role="form" class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <label class="col-lg-2 control-label">To</label>
+                                                                                <div class="col-lg-10">
+                                                                                    <input type="text" placeholder="" id="inputEmail1" class="form-control">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-lg-2 control-label">Cc / Bcc</label>
+                                                                                <div class="col-lg-10">
+                                                                                    <input type="text" placeholder="" id="cc" class="form-control">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-lg-2 control-label">Subject</label>
+                                                                                <div class="col-lg-10">
+                                                                                    <input type="text" placeholder="" id="inputPassword1" class="form-control">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="col-lg-2 control-label">Message</label>
+                                                                                <div class="col-lg-10">
+                                                                                    <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..."></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="col-lg-offset-2 col-lg-10">
+                                                                                    <div class="fileupload btn btn-info btn-anim mr-10"><i class="zmdi zmdi-attachment"></i><span class="btn-text">attachments</span>
+                                                                                        <input type="file" class="upload">
+                                                                                    </div>
+                                                                                    
+                                                                                    <button class="btn btn-success" type="submit">Send</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+                                                        <!-- /.modal -->
+                                                    </div>
+                                                    <ul class="inbox-nav mb-30">
+                                                        <li class="active">
+                                                            <a href="#"><i class="zmdi zmdi-inbox"></i> Inbox <span class="label label-danger ml-10">2</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="zmdi zmdi-email-open"></i> Sent Mail</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="zmdi zmdi-bookmark-outline"></i> Important</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="zmdi zmdi-folder-outline"></i> Drafts <span class="label label-info ml-10">30</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="zmdi zmdi-delete"></i> Trash</a>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="pl-15 mb-20">Labels</h6>
+                                                    <ul class="inbox-nav mb-30">
+                                                        <li> <a href="#"> <i class=" fa fa-stop txt-danger"></i> Work </a> </li>
+                                                        <li> <a href="#"> <i class=" fa fa-stop txt-success"></i> Design </a> </li>
+                                                        <li> <a href="#"> <i class=" fa fa-stop txt-info "></i> Family </a>
+                                                        </li>
+                                                        <li> <a href="#"> <i class=" fa fa-stop txt-warning "></i> Friends </a>
+                                                        </li>
+                                                        <li> <a href="#"> <i class=" fa fa-stop txt-primary "></i> Office </a>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="pl-15 mb-20">online</h6>
+                                                        <ul class="chat-list-wrap">
+                                                        <li class="chat-list">
+                                                            <div class="chat-body">
+                                                                <a href="javascript:void(0)">
+                                                                    <div class="chat-data">
+                                                                        <img class="user-img img-circle"  src="../img/user.png" alt="user"/>
+                                                                        <div class="user-data">
+                                                                            <span class="name block capitalize-font">Clay Masse</span>
+                                                                            <span class="time block truncate txt-grey">No one saves us but ourselves.</span>
+                                                                        </div>
+                                                                        <div class="status away"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="javascript:void(0)">
+                                                                    <div class="chat-data">
+                                                                        <img class="user-img img-circle"  src="../img/user1.png" alt="user"/>
+                                                                        <div class="user-data">
+                                                                            <span class="name block capitalize-font">Evie Ono</span>
+                                                                            <span class="time block truncate txt-grey">Unity is strength</span>
+                                                                        </div>
+                                                                        <div class="status offline"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="javascript:void(0)">
+                                                                    <div class="chat-data">
+                                                                        <img class="user-img img-circle"  src="../img/user2.png" alt="user"/>
+                                                                        <div class="user-data">
+                                                                            <span class="name block capitalize-font">Madalyn Rascon</span>
+                                                                            <span class="time block truncate txt-grey">Respect yourself if you would have others respect you.</span>
+                                                                        </div>
+                                                                        <div class="status online"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="javascript:void(0)">
+                                                                    <div class="chat-data">
+                                                                        <img class="user-img img-circle"  src="../img/user3.png" alt="user"/>
+                                                                        <div class="user-data">
+                                                                            <span class="name block capitalize-font">Mitsuko Heid</span>
+                                                                            <span class="time block truncate txt-grey">I’m thankful.</span>
+                                                                        </div>
+                                                                        <div class="status online"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="javascript:void(0)">
+                                                                    <div class="chat-data">
+                                                                        <img class="user-img img-circle"  src="../img/user.png" alt="user"/>
+                                                                        <div class="user-data">
+                                                                            <span class="name block capitalize-font">Ezequiel Merideth</span>
+                                                                            <span class="time block truncate txt-grey">Patience is bitter.</span>
+                                                                        </div>
+                                                                        <div class="status offline"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </aside>
+                                                
+                                                <aside class="col-lg-9 col-md-8 pl-0">
+                                                    <div class="panel panel-refresh pa-0">
+                                                        <div class="refresh-container">
+                                                            <div class="la-anim-1"></div>
+                                                        </div>
+                                                        <div class="panel-heading pt-20 pb-20 pl-15 pr-15">
+                                                            <div class="pull-left">
+                                                                <h6 class="panel-title txt-dark">inbox</h6>
+                                                            </div>
+                                                            <div class="pull-right">
+                                                                <form role="search" class="inbox-search inline-block pull-left mr-15">
+                                                                    <div class="input-group">
+                                                                        <input name="example-input1-group2" class="form-control" placeholder="Search" type="text">
+                                                                        <span class="input-group-btn">
+                                                                        <button type="button" class="btn  btn-default" data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </form>
+                                                                <a href="#" class="pull-left inline-block refresh">
+                                                                    <i class="zmdi zmdi-replay"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="panel-wrapper collapse in">
+                                                            <div class="panel-body inbox-body pa-0">
+                                                                <div class="heading-inbox">
+                                                                    <div class="container-fluid">
+                                                                        <div class="pull-left">
+                                                                            <div class="compose-btn">
+                                                                                <a class="btn btn-sm mr-10" href="#" data-toggle="modal" title="Compose"><i class="zmdi zmdi-chevron-left"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pull-right text-right">
+                                                                            <button class="btn btn-sm mr-10" title="" type="button" ><i class="zmdi zmdi-print"></i> </button>
+                                                                            <button class="btn btn-sm mr-10" title=""><i class="zmdi zmdi-delete"></i></button>
+                                                                            <div class="inline-block dropdown">
+                                                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more"></i></a>
+                                                                                <ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Mark as Unread</a></li>
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Mark as Important</a></li>
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Report Spam</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="light-grey-hr mt-10 mb-15"/>
+                                                                    <div class="container-fluid mb-20">	
+                                                                        <h4 class="weight-500"> Donec vitae leo at sem lobortis porttitor eu consequat risus.</h4>
+                                                                    </div>	
+                                                                </div>
+                                                                <div class="sender-info">
+                                                                    <div class="container-fluid">
+                                                                        <div class="sender-img-wrap pull-left mr-20">
+                                                                            <img class="sender-img" alt="user" src="../img/user1.png">
+                                                                        </div>
+                                                                        <div class="sender-details   pull-left">
+                                                                            <span class="capitalize-font pr-5 txt-dark block font-15 weight-500 head-font">John Doe</span>
+                                                                            <span class="block">
+                                                                                to
+                                                                                <span>me</span>
+                                                                            </span>	
+                                                                        </div>	
+                                                                        <div class="pull-right">
+                                                                            <div class="inline-block mr-5">
+                                                                                <span class="inbox-detail-time-1 font-12">10:06 AM</span>
+                                                                                <span class="inbox-detail-time-2 font-12 inline-block">(2 hours ago)</span>
+                                                                            </div>
+                                                                            <div class="inline-block dropdown">
+                                                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi   zmdi-more-vert"></i></a>
+                                                                                <ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Reply</a></li>
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Forward</a></li>
+                                                                                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Delete</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="container-fluid view-mail mt-20">
+                                                                    <p>Faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
+                                                                    <p>Consequat risus. Mauris sed congue orci. Donec ultrices <a href="#">flatlab</a>. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec
+                                                                        <a href="#">vitae leo at sem lobortis porttitor eu consequat risus</a>. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. 
+                                                                    </p>
+                                                                    <p>Modales vulputate urna, vel <a href="#">thevectorlab.net</a>. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
+                                                                </div>
+                                                                <hr class="light-grey-hr mt-20 mb-20"/>
+                                                                <div class="container-fluid attachment-mail mt-40 mb-40">
+                                                                    <div class="download-blocks mb-20">
+                                                                        <span class="pr-15"><i class="zmdi zmdi-attachment-alt pr-10"></i>3 attachments</span>
+                                                                        <a href="#"><i class="zmdi zmdi-download pr-10"></i>Download</a>
+                                                                    </div>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#" class="atch-thumb">
+                                                                                <div class="attached-img-container" style="background-image:url(../img/gallery/equal-size/mock1.jpg)"></div>
+                                                                                <div class="file-name">
+                                                                                    Image 1
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="atch-thumb">
+                                                                                <div class="attached-img-container" style="background-image:url(../img/gallery/equal-size/mock2.jpg)"></div>
+                                                                                <div class="file-name">
+                                                                                    Image 2
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="atch-thumb">
+                                                                                <div class="attached-img-container" style="background-image:url(../img/gallery/equal-size/mock3.jpg)"></div>
+                                                                                <div class="file-name">
+                                                                                    Image 3
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				
+				<!-- /Row -->
+
+					
+
+			<!-- Footer -->
+			<footer class="footer container-fluid pl-30 pr-30">
+				<div class="row">
+					<div class="col-sm-12">
+						<p>2019 CWR Data Analytics Bootcamp - Final Project</p>
+					</div>
+				</div>
+			</footer>
+			<!-- /Footer -->
+			
+		
+        <!-- /Main Content -->
+
+  
+    <!-- /#wrapper -->
+	
+	<!-- JavaScript -->
+
+    <!-- jQuery -->
+    <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+	<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Data table JavaScript -->
+	<script src="../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	
+	<!-- Flot Charts JavaScript -->
+	<script src="../vendors/bower_components/Flot/excanvas.min.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.pie.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.resize.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.time.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.stack.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.crosshair.js"></script>
+	<script src="../vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+	<script src="../full-width-light/dist/js/flot-data.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="../full-width-light/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- simpleWeather JavaScript -->
+    <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+	<script src="../full-width-light/dist/js/simpleweather-data.js"></script>
+	
+	<!-- Progressbar Animation JavaScript -->
+	<script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <!-- EChartJS JavaScript -->
+    <script src="../vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
+    <script src="../vendors/echarts-liquidfill.min.js"></script>
+
+    <!-- Progressbar Animation JavaScript -->
+    <script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="../full-width-light/dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- Sparkline JavaScript -->
+    <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
+
+    <!-- Owl JavaScript -->
+    <script src="../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <!-- Toast JavaScript -->
+    <!-- <script src="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
+
+    <!-- Piety JavaScript -->
+    <script src="../vendors/bower_components/peity/jquery.peity.min.js"></script>
+    <script src="../full-width-light/dist/js/peity-data.js"></script>
+
+    <!-- Switchery JavaScript -->
+	<script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+	<!-- Bootstrap Select JavaScript -->
+	<script src="../vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Init JavaScript -->
+    <script src="../full-width-light/dist/js/init.js"></script>
+    <script src="../full-width-light/dist/js/dashboard6-data.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,9 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- Calendar CSS -->
+		<link href="../vendors/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css"/>
 		
 		<!-- vector map CSS -->
 		<!-- <link href="../vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
@@ -38,7 +41,7 @@
 						<div class="logo-wrap">
 							<a href="index.html">
 								<img class="brand-img" src="../img/logo.png" alt="brand" />
-								<span class="brand-text">Dream Team</span>
+								<span class="brand-text">RealEZ</span>
 							</a>
 						</div>
 					</div>
@@ -76,16 +79,16 @@
 							<div class="clearfix"></div>
 						</a>
 						<ul id="dashboard_dr" class="collapse collapse-level-1">
+							
 							<li>
-								<a href="index.html">Analytical</a>
+								<a class="active-page" href="index6.html">General Dashboard</a>
+							</li>
+
+							<li>
+								<a href="index.html">Personal Dashboard</a>
 							</li>
 	
-							<li>
-								<a class="active-page" href="index6.html">Real Estate</a>
-							</li>
-							<li>
-								<a href="profile.html">profile</a>
-							</li>
+							
 						</ul>
 					</li>
 	
@@ -127,9 +130,7 @@
 							<li>
 								<a href="file-manager.html">File Manager</a>
 							</li>
-							<li>
-								<a href="todo-tasklist.html">To Do/Tasklist</a>
-							</li>
+							
 						</ul>
 					</li>
 					<li>
@@ -148,14 +149,7 @@
 						</a>
 						<ul id="form_dr" class="collapse collapse-level-1 two-col-list">
 							<li>
-								<a href="form-layout.html">form Layout</a>
-							</li>
-							<li>
-								<a href="form-advanced.html">Form Advanced</a>
-							</li>
-							
-							<li>
-								<a href="tinymce-wysihtml5.html">Tinymce Wysihtml5</a>
+								<a href="machinelearning.html">Customer Form</a>
 							</li>
 							
 						</ul>
@@ -163,38 +157,14 @@
 	
 					<li>
 						<a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
-							<div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Tables</span></div>
+							<div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
 							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
 							<div class="clearfix"></div>
 						</a>
 						<ul id="table_dr" class="collapse collapse-level-1 two-col-list">
-							<li>
-								<a href="basic-table.html">Basic Table</a>
-							</li>
-							<li>
-								<a href="bootstrap-table.html">Bootstrap Table</a>
-							</li>
-							<li>
-								<a href="data-table.html">Data Table</a>
-							</li>
-							<li>
-								<a href="export-table.html">Export Table</a>
-							</li>
-							<li>
-								<a href="responsive-data-table.html">RSPV DataTable</a>
-							</li>
-							<li>
-								<a href="responsive-table.html">Responsive Table</a>
-							</li>
-							<li>
-								<a href="editable-table.html">Editable Table</a>
-							</li>
-							<li>
-								<a href="foo-table.html">Foo Table</a>
-							</li>
-							<li>
-								<a href="jsgrid-table.html">Jsgrid Table</a>
-							</li>
+								<li>
+									<a href="machinelearning.html">Machine Learning</a>
+								</li>
 						</ul>
 					</li>
 	
@@ -597,6 +567,12 @@
 		<!-- Bootstrap Core JavaScript -->
 		<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<!-- <script src="../vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script> -->
+
+		<!-- Calender JavaScripts -->
+	<script src="../vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="../vendors/jquery-ui.min.js"></script>
+	<script src="../vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="../full-width-light/dist/js/fullcalendar-data.js"></script>
 
 		<!-- Moment JavaScript -->
 		<script type="text/javascript" src="../vendors/bower_components/moment/min/moment-with-locales.min.js"></script>

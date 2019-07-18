@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Real Estate CRM</title>
+	<meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="hencework"/>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Data table CSS -->
+    <link href="../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Toast CSS -->
+    <link href="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+	<link href="../full-width-light/dist/css/style.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div class="preloader-it">
+		<div class="la-anim-1"></div>
+	</div>
+	<!-- /Preloader -->
+    <div class="wrapper  theme-5-active pimary-color-green">
+		<!-- Top Menu Items -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="mobile-only-brand pull-left">
+                <div class="nav-header pull-left">
+                    <div class="logo-wrap">
+                        <a href="index.html">
+                            <img class="brand-img" src="../img/logo.png" alt="brand" />
+                            <span class="brand-text">RealEZ</span>
+                        </a>
+                    </div>
+                </div>
+                <a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu"></i></a>
+                <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
+                <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+                <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+                    <div class="input-group">
+                        <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+						<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+						</span>
+                    </div>
+                </form>
+            </div>
+            <div id="mobile_only_nav" class="mobile-only-nav pull-right">
+                <ul class="nav navbar-right top-nav pull-right">
+                    
+                </ul>
+            </div>
+        </nav>
+		<!-- /Top Menu Items -->
+		
+		<!-- Left Sidebar Menu -->
+		<div class="fixed-sidebar-left">
+            <ul class="nav navbar-nav side-nav nicescroll-bar">
+                <li class="navigation-header">
+                    <span>Main</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+                <li>
+                    <a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="dashboard_dr" class="collapse collapse-level-1">
+						<li>
+							<a class="active-page" href="index6.html">General Dashboard</a>
+						</li>
+						<li>
+                            <a href="index.html">Personal Dashboard</a>
+                        </li>
+
+                        
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">Apps </span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="app_dr" class="collapse collapse-level-1">
+                        <li>
+                            <a href="chats.html">chats</a>
+                        </li>
+                        <li>
+                            <a href="calendar.html">calendar</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="email_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="inbox.html">inbox</a>
+                                </li>
+                                <li>
+                                    <a href="inbox-detail.html">detail email</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="contact_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="contact-list.html">list</a>
+                                </li>
+                                <li>
+                                    <a href="contact-card.html">cards</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="file-manager.html">File Manager</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <hr class="light-grey-hr mb-10" />
+                </li>
+                <li class="navigation-header">
+                    <span>component</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#form_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-edit mr-20"></i><span class="right-nav-text">Forms</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
+                        <li>
+                            <a href="form-layout.html">Customer Form</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
+							<li>
+								<a href="basic-table.html">Machine Learning</a>
+							</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+		<!-- /Left Sidebar Menu -->
+
+        <!-- Main Content -->
+		<div class="page-wrapper">
+            <div class="container-fluid pt-25">
+
+                <!-- Row -->
+                
+                <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default card-view pa-0">
+                                <div class="panel-wrapper collapse in">
+                                    <div class="panel-body pa-0">
+                                        <div class="contact-list">
+                                            <div class="row">
+                                                <aside class="col-lg-2 col-md-4 pr-0">
+                                                    <div class="mt-20 mb-20 ml-15 mr-15">
+                                                        <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-success btn-block">
+                                                        Add new contact
+                                                        </a>
+                                                        <!-- Modal -->
+                                                        <div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                        <h4 class="modal-title" id="myModalLabel">Add New Contact</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form class="form-horizontal form-material">
+                                                                            <div class="form-group">
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Type name">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Email">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Phone">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Designation">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Age">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Date of joining">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <input type="text" class="form-control" placeholder="Salary">
+                                                                                </div>
+                                                                                <div class="col-md-12 mb-20">
+                                                                                    <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
+                                                                                        <input type="file" class="upload">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+                                                        <!-- /.modal -->
+                                                    </div>
+                                                    <ul class="inbox-nav mb-30">
+                                                        <li class="active">
+                                                            <a href="#">Work <span class="label label-primary ml-10">12</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">design <span class="label label-danger ml-10">20</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">family <span class="label label-warning ml-10">2</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">friends<span class="label label-info ml-10">30</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">office <span class="label label-success ml-10">2</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                    <a class="txt-success create-label  pa-15" href="javascript:void(0)" data-toggle="modal" data-target="#myModal_1">+ Create New Label</a>
+                                                    <div id="myModal_1" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                    <h5 class="modal-title" id="myModalLabel">Add Lable</h5>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <form>
+                                                                        <div class="form-group">
+                                                                            <label class="control-label mb-10">Name of Label</label>
+                                                                            <input type="text" class="form-control" placeholder="Type name">
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="control-label mb-10">Select Number of people</label>
+                                                                            <select class="form-control">
+                                                                                <option>All Contacts</option>
+                                                                                <option>10</option>
+                                                                                <option>20</option>
+                                                                                <option>30</option>
+                                                                                <option>40</option>
+                                                                                <option>Custom</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
+                                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.modal-content -->
+                                                        </div>
+                                                        <!-- /.modal-dialog -->
+                                                    </div>
+                                                </aside>
+                                                
+                                                <aside class="col-lg-10 col-md-8 pl-0">
+                                                    <div class="panel pa-0">
+                                                    <div class="panel-wrapper collapse in">
+                                                    <div class="panel-body  pa-0">
+                                                        <div class="table-responsive mb-30">
+                                                            <table id="datable_1" class="table  display table-hover mb-30" data-page-size="10">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>No</th>
+                                                                        <th>Name</th>
+                                                                        <th>Email</th>
+                                                                        <th>Phone</th>
+                                                                        <th>Role</th>
+                                                                        <th>Joining date</th>
+                                                                        <th>Salery</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td><a href="#">Jens Brincker</a></td>
+                                                                        <td>jens@example.com</td>
+                                                                        <td>+0 123 456 789</td>
+                                                                        <td><span class="label label-danger">Designer</span> </td>
+                                                                        <td>12-10-2014</td>
+                                                                        <td>$1200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td><a href="#">Mark Hay</a></td>
+                                                                        <td>markh@example.com</td>
+                                                                        <td>+234 456 789</td>
+                                                                        <td><span class="label label-info">Developer</span> </td>
+                                                                        <td>10-09-2014</td>
+                                                                        <td>$1800</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td><a href="#">Anthony Davie</a></td>
+                                                                        <td>nthonyavie@example.com</td>
+                                                                        <td>+345 456 789</td>
+                                                                        <td><span class="label label-success">Accountant</span></td>
+                                                                        <td>1-10-2013</td>
+                                                                        <td>$2200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td><a href="#">David Perry</a></td>
+                                                                        <td>david@example.com</td>
+                                                                        <td>+456 456 789</td>
+                                                                        <td><span class="label label-inverse">HR</span></td>
+                                                                        <td>2-10-2016</td>
+                                                                        <td>$200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>5</td>
+                                                                        <td><a href="#">Alan Gilchrist</a></td>
+                                                                        <td>alan@example.com</td>
+                                                                        <td>+567 456 789</td>
+                                                                        <td><span class="label label-danger">Manager</span></td>
+                                                                        <td>10-9-2015</td>
+                                                                        <td>$1200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>6</td>
+                                                                        <td><a href="#">Sue Woodger</a></td>
+                                                                        <td>suew@example.com</td>
+                                                                        <td>+678 456 789</td>
+                                                                        <td><span class="label label-warning">Chairman</span></td>
+                                                                        <td>10-5-2013</td>
+                                                                        <td>$1500</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>7</td>
+                                                                        <td><a href="#">Barry Croucher</a></td>
+                                                                        <td>barry@example.com</td>
+                                                                        <td>+0 123 456 789</td>
+                                                                        <td><span class="label label-danger">Designer</span></td>
+                                                                        <td>05-10-2012</td>
+                                                                        <td>$3200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>8</td>
+                                                                        <td><a href="#">Ian Vaughn</a></td>
+                                                                        <td>ian@example.com</td>
+                                                                        <td>+234 456 789</td>
+                                                                        <td><span class="label label-info">Developer</span></td>
+                                                                        <td>11-10-2014</td>
+                                                                        <td>$1800</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>9</td>
+                                                                        <td><a href="#">Serena Fredrick</a></td>
+                                                                        <td>serena@example.com</td>
+                                                                        <td>+345 456 789</td>
+                                                                        <td><span class="label label-success">Accountant</span></td>
+                                                                        <td>12-5-2016</td>
+                                                                        <td>$100</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>10</td>
+                                                                        <td><a href="#">Tim Gray</a></td>
+                                                                        <td>tim@example.com</td>
+                                                                        <td>+456 456 789</td>
+                                                                        <td><span class="label label-inverse">HR</span></td>
+                                                                        <td>18-5-2009</td>
+                                                                        <td>$4200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>11</td>
+                                                                        <td><a href="#">Jeremy Upton</a></td>
+                                                                        <td>jeremy@example.com</td>
+                                                                        <td>+567 456 789</td>
+                                                                        <td><span class="label label-danger">Manager</span></td>
+                                                                        <td>12-10-2010</td>
+                                                                        <td>$5200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td><a href="#">Emily Hick</a></td>
+                                                                        <td>emily@example.com</td>
+                                                                        <td>+0 123 456 789</td>
+                                                                        <td><span class="label label-danger">Designer</span> </td>
+                                                                        <td>12-10-2014</td>
+                                                                        <td>$1200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>13</td>
+                                                                        <td><a href="#">Tom Armitage</a></td>
+                                                                        <td>tom@example.com</td>
+                                                                        <td>+234 456 789</td>
+                                                                        <td><span class="label label-info">Developer</span> </td>
+                                                                        <td>10-09-2014</td>
+                                                                        <td>$1800</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14</td>
+                                                                        <td><a href="#">Rhian Davies</a></td>
+                                                                        <td>rhian@example.com</td>
+                                                                        <td>+345 456 789</td>
+                                                                        <td><span class="label label-success">Accountant</span></td>
+                                                                        <td>1-10-2013</td>
+                                                                        <td>$2200</td>
+                                                                        <td><a href="javascript:void(0)" class="text-inverse pr-10" title="Edit" data-toggle="tooltip"><i class="zmdi zmdi-edit txt-warning"></i></a><a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete txt-danger"></i></a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				
+				<!-- /Row -->
+
+					
+
+			<!-- Footer -->
+			<footer class="footer container-fluid pl-30 pr-30">
+				<div class="row">
+					<div class="col-sm-12">
+						<p>2019 CWR Data Analytics Bootcamp - Final Project</p>
+					</div>
+				</div>
+			</footer>
+			<!-- /Footer -->
+			
+		
+        <!-- /Main Content -->
+
+  
+    <!-- /#wrapper -->
+	
+	<!-- JavaScript -->
+
+    <!-- jQuery -->
+    <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+	<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Data table JavaScript -->
+	<script src="../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	
+	<!-- Flot Charts JavaScript -->
+	<script src="../vendors/bower_components/Flot/excanvas.min.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.pie.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.resize.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.time.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.stack.js"></script>
+	<script src="../vendors/bower_components/Flot/jquery.flot.crosshair.js"></script>
+	<script src="../vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+	<script src="../full-width-light/dist/js/flot-data.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="../full-width-light/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- simpleWeather JavaScript -->
+    <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+	<script src="../full-width-light/dist/js/simpleweather-data.js"></script>
+	
+	<!-- Progressbar Animation JavaScript -->
+	<script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <!-- EChartJS JavaScript -->
+    <script src="../vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
+    <script src="../vendors/echarts-liquidfill.min.js"></script>
+
+    <!-- Progressbar Animation JavaScript -->
+    <script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="../full-width-light/dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- Sparkline JavaScript -->
+    <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
+
+    <!-- Owl JavaScript -->
+    <script src="../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <!-- Toast JavaScript -->
+    <!-- <script src="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
+
+    <!-- Piety JavaScript -->
+    <script src="../vendors/bower_components/peity/jquery.peity.min.js"></script>
+    <script src="../full-width-light/dist/js/peity-data.js"></script>
+
+    <!-- Switchery JavaScript -->
+	<script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+	<!-- Bootstrap Select JavaScript -->
+	<script src="../vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Init JavaScript -->
+    <script src="../full-width-light/dist/js/init.js"></script>
+    <script src="../full-width-light/dist/js/dashboard6-data.js"></script>
+</body>
+
+</html>

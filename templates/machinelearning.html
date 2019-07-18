@@ -147,7 +147,7 @@
                     </a>
                     <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="machinelearning.html">Customer Form</a>
+                            <a href="form-layout.html">Customer Form</a>
                         </li>
                         
                     </ul>
@@ -174,334 +174,6 @@
 		<div class="page-wrapper">
             <div class="container-fluid pt-25">
 
-				<!-- Row -->
-				<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-							<div class="panel panel-default card-view pa-0">
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body pa-0">
-										<div class="sm-data-box">
-											<div class="container-fluid">
-												<div class="row">
-													<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-														<span class="txt-dark block counter"><span class="counter-anim" id="newcustomers"></span></span>
-														<span class="weight-500 uppercase-font block font-13">New Customers</span>
-													</div>
-													<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-														<i class="icon-user-following data-right-rep-icon txt-light-grey"></i>
-													</div>
-												</div>	
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default card-view pa-0">
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body pa-0">
-										<div class="sm-data-box">
-											<div class="container-fluid">
-												<div class="row">
-													<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-														<span class="txt-dark block counter"><span class="counter-anim" id="customersleaving"></span></span>
-														<span class="weight-500 uppercase-font block">Customers Leaving</span>
-													</div>
-													<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-														<i class="icon-control-rewind data-right-rep-icon txt-light-grey"></i>
-													</div>
-												</div>	
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default card-view pa-0 bg-green">
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body pa-0">
-										<div class="sm-data-box">
-											<div class="container-fluid">
-												<div class="row">
-													<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left txt-light">
-														<span class="block counter" id="propertiessold"><span ></span></span>
-														<span class="weight-500 uppercase-font block">Properties Sold</span>
-													</div>
-													<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-														<i class="icon-layers data-right-rep-icon txt-light"></i>
-													</div>
-												</div>	
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="panel card-view">
-								<div class="panel-heading small-panel-heading relative">
-									<div class="pull-left">
-										<h6 class="panel-title">Agent Revenue</h6>
-									</div>
-									<div class="clearfix"></div>
-									<div class="head-overlay"></div>
-								</div>		
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row pa-0">
-										<div class="sm-data-box">
-											<div class="container-fluid">
-												<div class="row">
-													<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-														<span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 ,mr-5 "></i><span class="weight-500 uppercase-font">Commissions</span></span>
-														<span class="txt-dark block counter" id="commissions">$<span >60</span></span>
-													</div>
-														
-													<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-															<span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 mr-5"></i><span class="weight-500 uppercase-font">Taxes</span></span>
-															<span class="txt-dark block counter" id="taxes">$<span >30</span></span>
-														<!-- <div id="sparkline_1" class="sp-small-chart" ></div> -->
-													</div>
-												</div>	
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-9 col-md-6 col-sm-12 col-xs-12">
-							<div class="panel panel-default card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">Yearly Revenue</h6>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="pull-left inline-block full-screen">
-											<i class="zmdi zmdi-fullscreen"></i>
-										</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<ul class="flex-stat mb-10 ml-15">
-											<li class="text-left auto-width mr-60">
-												<span class="block">Last Year</span>
-												<span class="block txt-dark weight-500 font-18" id="lastyear">$<span>0</span></span>
-												<span class="block txt-success mt-5">
-													<i class="zmdi zmdi-caret-up pr-5 font-20"></i><span class="weight-500">+15%</span>
-												</span>
-												<div class="clearfix"></div>
-											</li>
-											<li class="text-left auto-width mr-60">
-												<span class="block">This Year</span>
-												<span class="block txt-dark weight-500 font-18" id="thisyear">$<span>0</span></span>
-												<span class="block txt-success mt-5">
-													<i class="zmdi zmdi-caret-up pr-5 font-20"></i><span class="weight-500">+4%</span>
-												</span>
-												<div class="clearfix"></div>
-											</li>
-											<li class="text-left auto-width">
-												<span class="block">Revenue</span>
-												<span class="block txt-dark weight-500 font-18" id="revenue">$<span>0</span></span>
-												<span class="block txt-danger mt-5">
-													<i class="zmdi zmdi-caret-down pr-5 font-20"></i><span class="weight-500">-5%</span>
-												</span>
-												<div class="clearfix"></div>
-											</li>
-										</ul>
-										<div id="e_chart_1" class="" style="height:310px;"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /Row -->
-
-				<!-- Row -->
-				<div class="row">
-
-					<!--Map begins-->
-						<div class="col-lg-6 col-xs-12">
-							<div class="panel panel-default card-view panel-refresh">
-								<div class="refresh-container">
-									<div class="la-anim-1"></div>
-								</div>
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">Portfolio Locations</h6>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="pull-left inline-block full-screen mr-15">
-											<i class="zmdi zmdi-fullscreen"></i>
-										</a>
-								
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<div id="world_map_marker_1" style="height: 385px"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					<!--Map ends-->
-
-					<!--Todo List begins-->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-default card-view panel-refresh">
-								<div class="refresh-container">
-									<div class="la-anim-1"></div>
-								</div>
-
-								<!-- Todo-List Heading-->
-										<div class="panel-heading">
-											<div class="pull-left">
-												<h6 class="panel-title txt-dark">todo</h6>
-											</div>
-											<div class="pull-right">
-												<div class="pull-left inline-block dropdown mr-15">
-													<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
-													<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-														<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Edit</a></li>
-														<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Clear All</a></li>
-														<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Select All</a></li>
-													</ul>
-												</div>
-												<a class="pull-left inline-block close-panel" href="#" data-effect="fadeOut">
-													<!-- <i class="zmdi zmdi-close"></i> -->
-												</a>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="panel-wrapper collapse in">
-											<div class="panel-body row pa-0" >
-												<div class="todo-box-wrap">
-													<!-- Todo-List Body -->
-													<ul class="todo-list todo-box-nicescroll-bar">
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox001"/>
-																<label for="checkbox001">Request copies of contracts</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox002"/>
-																<label for="checkbox002">Prepare The Conference Schedule</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox003" checked/>
-																<label for="checkbox003">Decide What Property For Mr. Lucas</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox004" checked/>
-																<label for="checkbox004">Prepare For The Next Project</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox005" checked/>
-																<label for="checkbox005">Finish Up Pending Contracts</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-														<li class="todo-item">
-															<div class="checkbox checkbox-success">
-																<input type="checkbox" id="checkbox006" checked/>
-																<label for="checkbox006">Finish Richmond Project</label>
-															</div>
-														</li>
-														<li>
-															<hr class="light-grey-hr"/>
-														</li>
-													</ul>
-													<!-- /Todo-List -->
-
-													<!-- New Todo begins-->
-											<div class="new-todo">
-													<div class="input-group">
-														<input type="text" id="add_todo" name="example-input2-group2" class="form-control" placeholder="Add new task">
-														<span class="input-group-btn">
-														<button type="button" class="btn btn-success"><i class="zmdi zmdi-plus txt-success"></i></button>
-														</span> 
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-											<!-- /New Todo ends -->
-
-											<!--My stats table begins-->
-
-											<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-												<div class="panel panel-default card-view panel-refresh">
-														<div class="refresh-container">
-															<div class="la-anim-1"></div>
-														</div>
-													<div class="panel-heading">
-													<div class="pull-left">
-														<h6 class="panel-title txt-dark">My Stats</h6>
-													</div>
-													<div class="clearfix"></div>
-												</div>
-													<div class="panel-wrapper collapse in">
-														<div class="panel-body row" >
-															<div class="">
-																<div class="pl-15 pr-15 mb-15">
-																	<div class="pull-left">
-																		<i class="zmdi zmdi-collection-folder-image inline-block mr-10 font-16"></i>
-																		<span class="inline-block txt-dark">Active Properties</span>
-																	</div>	
-																	<span class="inline-block txt-warning pull-right weight-500" id="activeproperties">12</span>
-																	<div class="clearfix"></div>
-																</div>
-																<hr class="light-grey-hr mt-0 mb-15"/>
-																<div class="pl-15 pr-15 mb-15">
-																	<div class="pull-left">
-																		<i class="zmdi zmdi-format-list-bulleted inline-block mr-10 font-16"></i>
-																		<span class="inline-block txt-dark">Pending to Close</span>
-																	</div>	
-																	<span class="inline-block txt-danger pull-right weight-500" id="pendingtoclose">23</span>
-																	<div class="clearfix"></div>
-																</div>
-																<hr class="light-grey-hr mt-0 mb-15"/>
-																<div class="pl-15 pr-15 mb-15">
-																	<div class="pull-left">
-																		<i class="zmdi zmdi-ticket-star inline-block mr-10 font-16"></i>
-																		<span class="inline-block txt-dark">House Showings</span>
-																	</div>	
-																	<span class="inline-block txt-primary pull-right weight-500" id="houseshowings">43</span>
-																	<div class="clearfix"></div>
-																</div>
-															</div>
-														</div>
-													</div>
-											</div>
-										</div>
-
-											<!--My stats table ends-->
-
-				</div>	
-					<!-- /Row -->
-
 					<!-- Row -->
 
 					<div class="row">
@@ -509,7 +181,7 @@
 								<div class="panel panel-default card-view">
 									<div class="panel-heading">
 										<div class="pull-left">
-											<h6 class="panel-title txt-dark">Active Customers</h6>
+											<h6 class="panel-title txt-dark">Machine Learning Data</h6>
 										</div>
 										<div class="pull-right">
 											<a href="#" class="pull-left inline-block full-screen">
@@ -534,7 +206,7 @@
 															</tr>
 														</thead>
 														<tbody>
-															<tr>
+															<!-- <tr>
 																<td>#85457898</td>
 																<td>Jens Brincker</td>
 																<td>Need more options</td>
@@ -613,7 +285,7 @@
 																	<span class="label label-danger">pending</span>
 																</td>
 																<td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed" ><i class="zmdi zmdi-check"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a></td>
-															</tr>
+															</tr> -->
 														</tbody>
 													</table>
 												</div>
@@ -625,6 +297,29 @@
 						</div>
 
 					<!-- /Row -->
+
+					<!-- Row - Line chart begins-->
+
+					<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-default card-view">
+									<div class="panel-heading">
+										<div class="pull-left">
+											<h6 class="panel-title txt-dark">Machine Learning Model</h6>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="panel-wrapper collapse in">
+										<div class="panel-body">
+											<canvas id="chart_1" height="100"></canvas>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+						
+
+					<!-- /Row  Line Chart ends-->
 
 			<!-- Footer -->
 			<footer class="footer container-fluid pl-30 pr-30">
