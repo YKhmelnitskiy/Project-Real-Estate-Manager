@@ -13,14 +13,18 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Calendar CSS -->
+		<link href="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet" type="text/css"/>
+
     <!-- Data table CSS -->
     <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
-    
+
     <!-- Toast CSS -->
     <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename='dist/css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -37,7 +41,7 @@
                     <div class="logo-wrap">
                         <a href="index.html">
                             <img class="brand-img" src="../img/logo.png" alt="brand" />
-                            <span class="brand-text">Dream Team</span>
+                            <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
                 </div>
@@ -75,16 +79,12 @@
                         <div class="clearfix"></div>
                     </a>
                     <ul id="dashboard_dr" class="collapse collapse-level-1">
-                        <li>
-                            <a href="index.html">Analytical</a>
-                        </li>
-
-                        <li>
-                            <a class="active-page" href="index6.html">Real Estate</a>
-                        </li>
-                        <li>
-                            <a href="profile.html">profile</a>
-                        </li>
+                            <li>
+                                <a class="active-page" href="index6.html">General Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="index.html">Personal Dashboard</a>
+                            </li>
                     </ul>
                 </li>
 
@@ -126,9 +126,7 @@
                         <li>
                             <a href="file-manager.html">File Manager</a>
                         </li>
-                        <li>
-                            <a href="todo-tasklist.html">To Do/Tasklist</a>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li>
@@ -147,14 +145,7 @@
                     </a>
                     <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="form-layout.html">form Layout</a>
-                        </li>
-                        <li>
-                            <a href="form-advanced.html">Form Advanced</a>
-                        </li>
-                        
-                        <li>
-                            <a href="tinymce-wysihtml5.html">Tinymce Wysihtml5</a>
+                            <a href="machinelearning.html">Customer Form</a>
                         </li>
                         
                     </ul>
@@ -162,49 +153,21 @@
 
                 <li>
                     <a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
-                        <div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Tables</span></div>
+                        <div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
                         <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
                         <div class="clearfix"></div>
                     </a>
                     <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="basic-table.html">Basic Table</a>
+                            <a href="machinelearning.html">Machine Learning</a>
                         </li>
-                        <li>
-                            <a href="bootstrap-table.html">Bootstrap Table</a>
-                        </li>
-                        <li>
-                            <a href="data-table.html">Data Table</a>
-                        </li>
-                        <li>
-                            <a href="export-table.html">Export Table</a>
-                        </li>
-                        <li>
-                            <a href="responsive-data-table.html">RSPV DataTable</a>
-                        </li>
-                        <li>
-                            <a href="responsive-table.html">Responsive Table</a>
-                        </li>
-                        <li>
-                            <a href="editable-table.html">Editable Table</a>
-                        </li>
-                        <li>
-                            <a href="foo-table.html">Foo Table</a>
-                        </li>
-                        <li>
-                            <a href="jsgrid-table.html">Jsgrid Table</a>
-                        </li>
+                        
                     </ul>
                 </li>
 
             </ul>
         </div>
         <!-- /Left Sidebar Menu -->
-
-        <!-- Right Sidebar Menu -->
-        <!-- Right Sidebar Backdrop -->
-        <!-- <div class="right-sidebar-backdrop"></div> -->
-        <!-- /Right Sidebar Backdrop -->
 
         <!-- Main Content -->
         <div class="page-wrapper">
@@ -219,7 +182,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span>{{count}}</span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span></span>
                                                     <span class="weight-500 uppercase-font block font-13">All Properties</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
@@ -373,7 +336,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 mr-5"></i><span class="weight-500 uppercase-font">growth</span></span>
-                                                    <span class="txt-dark block counter">$<span class="counter-anim" id="growth"></span></span>
+                                                    <span class="txt-dark block counter">$<span class="counter-anim" id="categoryoverview"></span></span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <div id="sparkline_7" class="sp-small-chart"></div>
@@ -435,16 +398,22 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
+    <!-- Calender JavaScripts -->
+	<script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/jquery-ui.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='full-width-light/dist/js/fullcalendar-data.js') }}"></script>
+
     <!-- Data table JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 
     <!-- Slimscroll JavaScript -->
-    <script src="{{ url_for('static', filename='dist/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
 
     <!-- simpleWeather JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='dist/js/simpleweather-data.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/simpleweather-data.js') }}"></script>
 
     <!-- EChartJS JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
@@ -455,7 +424,7 @@
     <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
 
     <!-- Fancy Dropdown JS -->
-    <script src="{{ url_for('static', filename='dist/js/dropdown-bootstrap-extended.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
 
     <!-- Sparkline JavaScript -->
     <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
@@ -468,14 +437,14 @@
 
     <!-- Piety JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='dist/js/peity-data.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/peity-data.js') }}"></script>
 
     <!-- Switchery JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
 
     <!-- Init JavaScript -->
-    <script src="{{ url_for('static', filename='dist/js/init.js') }}"></script>
-    <script src="{{ url_for('static', filename='dist/js/dashboard6-data.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js') }}"></script>
 </body>
 
 </html>
