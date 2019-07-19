@@ -39,8 +39,8 @@
             <div class="mobile-only-brand pull-left">
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
-                        <a href="index.html">
-                            <img class="brand-img" src="../img/logo.png" alt="brand" />
+                        <a href="/index">
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -80,10 +80,10 @@
                     </a>
                     <ul id="dashboard_dr" class="collapse collapse-level-1">
                             <li>
-                                <a class="active-page" href="index6.html">General Dashboard</a>
+                                <a class="active-page" href="/">General Dashboard</a>
                             </li>
                             <li>
-                                <a href="index.html">Personal Dashboard</a>
+                                <a href="/index">Personal Dashboard</a>
                             </li>
                     </ul>
                 </li>
@@ -96,19 +96,19 @@
                     </a>
                     <ul id="app_dr" class="collapse collapse-level-1">
                         <li>
-                            <a href="chats.html">chats</a>
+                            <a href="/chats">chats</a>
                         </li>
                         <li>
-                            <a href="calendar.html">calendar</a>
+                            <a href="/calendar">calendar</a>
                         </li>
                         <li>
                             <a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
                             <ul id="email_dr" class="collapse collapse-level-2">
                                 <li>
-                                    <a href="inbox.html">inbox</a>
+                                    <a href="/inbox">inbox</a>
                                 </li>
                                 <li>
-                                    <a href="inbox-detail.html">detail email</a>
+                                    <a href="/inbox-detail">detail email</a>
                                 </li>
                             </ul>
                         </li>
@@ -116,15 +116,15 @@
                             <a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
                             <ul id="contact_dr" class="collapse collapse-level-2">
                                 <li>
-                                    <a href="contact-list.html">list</a>
+                                    <a href="/contact-list">list</a>
                                 </li>
                                 <li>
-                                    <a href="contact-card.html">cards</a>
+                                    <a href="/contact-card">cards</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="file-manager.html">File Manager</a>
+                            <a href="/file-manager">File Manager</a>
                         </li>
                         
                     </ul>
@@ -145,7 +145,7 @@
                     </a>
                     <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="machinelearning.html">Customer Form</a>
+                            <a href="/form-layout">Customer Form</a>
                         </li>
                         
                     </ul>
@@ -159,7 +159,7 @@
                     </a>
                     <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="machinelearning.html">Machine Learning</a>
+                            <a href="/machinelearning">Machine Learning</a>
                         </li>
                         
                     </ul>
@@ -182,7 +182,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span></span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim" id="all_properties"></span>{{count}}</span>
                                                     <span class="weight-500 uppercase-font block font-13">All Properties</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">

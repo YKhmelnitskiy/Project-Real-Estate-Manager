@@ -13,13 +13,13 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	
 	<!-- Data table CSS -->
-    <link href="../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- Toast CSS -->
-    <link href="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-	<link href="../full-width-light/dist/css/style.css" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
 	
 </head>
 
@@ -35,8 +35,8 @@
             <div class="mobile-only-brand pull-left">
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
-                        <a href="index.html">
-                            <img class="brand-img" src="../img/logo.png" alt="brand" />
+                        <a href="/index">
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -76,10 +76,10 @@
                     </a>
                     <ul id="dashboard_dr" class="collapse collapse-level-1">
 						<li>
-							<a class="active-page" href="index6.html">General Dashboard</a>
+							<a class="active-page" href="/">General Dashboard</a>
 						</li>
 						<li>
-                            <a href="index.html">Personal Dashboard</a>
+                            <a href="/index">Personal Dashboard</a>
                         </li>
 
                         
@@ -95,19 +95,19 @@
                     </a>
                     <ul id="app_dr" class="collapse collapse-level-1">
                         <li>
-                            <a href="chats.html">chats</a>
+                            <a href="/chats">chats</a>
                         </li>
                         <li>
-                            <a href="calendar.html">calendar</a>
+                            <a href="/calendar">calendar</a>
                         </li>
                         <li>
                             <a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
                             <ul id="email_dr" class="collapse collapse-level-2">
                                 <li>
-                                    <a href="inbox.html">inbox</a>
+                                    <a href="/inbox">inbox</a>
                                 </li>
                                 <li>
-                                    <a href="inbox-detail.html">detail email</a>
+                                    <a href="/inbox-detail">detail email</a>
                                 </li>
                             </ul>
                         </li>
@@ -115,15 +115,15 @@
                             <a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
                             <ul id="contact_dr" class="collapse collapse-level-2">
                                 <li>
-                                    <a href="contact-list.html">list</a>
+                                    <a href="/contact-list">list</a>
                                 </li>
                                 <li>
-                                    <a href="contact-card.html">cards</a>
+                                    <a href="/contact-card">cards</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="file-manager.html">File Manager</a>
+                            <a href="/file-manager">File Manager</a>
                         </li>
                         
                     </ul>
@@ -144,7 +144,7 @@
                     </a>
                     <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
                         <li>
-                            <a href="form-layout.html">Customer Form</a>
+                            <a href="/form-layout">Customer Form</a>
                         </li>
                         
                     </ul>
@@ -158,7 +158,7 @@
                     </a>
                     <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
 							<li>
-								<a href="basic-table.html">Machine Learning</a>
+								<a href="/machinelearning">Machine Learning</a>
 							</li>
                     </ul>
                 </li>
@@ -179,7 +179,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -247,8 +247,8 @@
 							<div class="panel panel-success contact-card card-view">
 								<div class="panel-heading">
 									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user1.png" alt="user"/>
+										<div class="pull-left user-img-wrap mr-15"> 
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user1.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -317,7 +317,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user4.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -386,7 +386,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user2.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -455,7 +455,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user4.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -524,7 +524,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user2.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -593,7 +593,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -662,7 +662,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user2.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -731,7 +731,7 @@
 								<div class="panel-heading">
 									<div class="pull-left">
 										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="../img/user4.png" alt="user"/>
+											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
 										</div>
 										<div class="pull-left user-detail-wrap">	
 											<span class="block card-user-name">
@@ -818,72 +818,72 @@
     <!-- /#wrapper -->
 	
 	<!-- JavaScript -->
-
+	
     <!-- jQuery -->
-    <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-	<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- Data table JavaScript -->
-	<script src="../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 	
 	<!-- Flot Charts JavaScript -->
-	<script src="../vendors/bower_components/Flot/excanvas.min.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.pie.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.resize.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.time.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.stack.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.crosshair.js"></script>
-	<script src="../vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-	<script src="../full-width-light/dist/js/flot-data.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/excanvas.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.pie.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.resize.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.time.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.stack.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.crosshair.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='full-width-light/dist/js/flot-data.js') }}"></script>
 
     <!-- Slimscroll JavaScript -->
-    <script src="../full-width-light/dist/js/jquery.slimscroll.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
 
     <!-- simpleWeather JavaScript -->
-    <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
-    <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
-	<script src="../full-width-light/dist/js/simpleweather-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='full-width-light/dist/js/simpleweather-data.js') }}"></script>
 	
 	<!-- Progressbar Animation JavaScript -->
-	<script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
 
     <!-- EChartJS JavaScript -->
-    <script src="../vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
-    <script src="../vendors/echarts-liquidfill.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/echarts-liquidfill.min.js') }}"></script>
 
     <!-- Progressbar Animation JavaScript -->
-    <script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
 
     <!-- Fancy Dropdown JS -->
-    <script src="../full-width-light/dist/js/dropdown-bootstrap-extended.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
 
     <!-- Sparkline JavaScript -->
-    <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script> -->
 
     <!-- Owl JavaScript -->
-    <script src="../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
 
     <!-- Toast JavaScript -->
-    <!-- <script src="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js') }}"></script> -->
 
     <!-- Piety JavaScript -->
-    <script src="../vendors/bower_components/peity/jquery.peity.min.js"></script>
-    <script src="../full-width-light/dist/js/peity-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/peity-data.js') }}"></script>
 
     <!-- Switchery JavaScript -->
-	<script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
 	
 	<!-- Bootstrap Select JavaScript -->
-	<script src="../vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
 
     <!-- Init JavaScript -->
-    <script src="../full-width-light/dist/js/init.js"></script>
-    <script src="../full-width-light/dist/js/dashboard6-data.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js') }}"></script>
 </body>
 
 </html>

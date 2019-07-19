@@ -155,5 +155,65 @@ def list_addresses():
         })
     return jsonify(homes)
 
+@app.route("/calendar")
+def calendar():
+    """Return to the calendar."""
+
+    return render_template("calendar.html")
+
+@app.route("/chats")
+def chats():
+    """Return to the chats."""
+
+    return render_template("chats.html")
+
+@app.route("/contact-card")
+def contact_card():
+    """Return to the contact-card."""
+
+    return render_template("contact-card.html")
+
+@app.route("/contact-list")
+def contact_list():
+    """Return to the contact-list."""
+
+    return render_template("contact-list.html")
+
+@app.route("/file-manager")
+def file_manager():
+    """Return to the file-manager."""
+
+    return render_template("file-manager.html")
+
+@app.route("/form-layout")
+def form_layout():
+    """Return to the form-layout."""
+
+    return render_template("form-layout.html")
+
+@app.route("/inbox-detail")
+def inbox_detail():
+    """Return to the inbox-detail."""
+
+    return render_template("inbox-detail.html")
+
+@app.route("/inbox")
+def inbox():
+    """Return to the inbox."""
+
+    return render_template("inbox.html")
+
+@app.route("/index")
+def index():
+    """Return to the index."""
+
+    return render_template("index.html")
+
+@app.route("/machinelearning")
+def machine_learning():
+    """Return to the machinelearning."""
+
+    return render_template("machinelearning.html")
+
 if __name__ == "__main__": 
     app.run()
