@@ -22,6 +22,19 @@
 		
 		<!-- Custom CSS -->
 		<link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
+		    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+	<!-- Added from Pusher down below -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	
 
 	</head>
 	
@@ -216,168 +229,7 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-wrap">
-													<form action="#" class="form-horizontal">
-														<div class="form-body">
-															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account mr-10"></i>Person's Info</h6>
-															<hr class="light-grey-hr"/>
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">First Name</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control" placeholder="John doe">
-																			<span class="help-block"> This is inline help </span> 
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-																<div class="col-md-6">
-																	<div class="form-group has-error">
-																		<label class="control-label col-md-3">Last Name</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control" placeholder="12n">
-																			<span class="help-block"> This field has error. </span> 
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-															</div>
-															<!-- /Row -->
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Budget</label>
-																		<div class="col-md-9">
-																			<select class="form-control">
-																				<option value="">$0</option>
-																				<option value="">$50,000 to $150,000</option>
-																				<option value="">$150,000 to $300,000</option>
-																				<option value="">$300,000 to $500,000</option>
-																				<option value="">$500,000 to $750,000</option>
-																				<option value="">>$750,000</option>
-																			</select>
-																			<span class="help-block"> Select your gender. </span> 
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Date of Birth</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control" placeholder="dd/mm/yyyy">
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-															</div>
-															<!-- /Row -->
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Category</label>
-																		<div class="col-md-9">
-																			<select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-																				<option value="Category 1">Category 1</option>
-																				<option value="Category 2">Category 2</option>
-																				<option value="Category 3">Category 5</option>
-																				<option value="Category 4">Category 4</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Option</label>
-																		<div class="col-md-9">
-																			<div class="radio-list">
-																				<div class="radio-inline pl-0">
-																					<span class="radio radio-info">																					<input type="radio" name="radio7" id="radio_9" value="option1">
-																						<label for="radio_9">Buying</label>
-																					</span>
-																				</div>
-																				<div class="radio-inline pl-0">
-																					<span class="radio radio-info">																				<input type="radio" name="radio7" id="radio_10" value="option2">
-																						<label for="radio_10">Renting</label>
-																					</span>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-															</div>
-															
-															<div class="seprator-block"></div>
-															
-															<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-account-box mr-10"></i>address</h6>
-															<hr class="light-grey-hr"/>
-															<!-- /Row -->
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Address 1</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Address 2</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control">
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">City</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control">
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">State</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control">
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-															</div>
-															<!-- /Row -->
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Post Code</label>
-																		<div class="col-md-9">
-																			<input type="text" class="form-control">
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-																<div class="col-md-6">
-																	<div class="form-group">
-																		<label class="control-label col-md-3">Country</label>
-																		<div class="col-md-9">
-																			<select class="form-control">
-																				<option>Country 1</option>
-																				<option>Country 2</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<!--/span-->
-															</div>
-															<!-- /Row -->
-														</div>
+													
 														<div class="form-actions mt-10">
 															<div class="row">
 																<div class="col-md-6">
@@ -537,10 +389,66 @@
 							</div>
 						</div>
 					
-					<!-- /Row -->
 
-					<!-- /Row -->
+					<!-- /pusherRow -->
+							<form method="POST" id="target"> 
+								<div class="form-group">
+									<input type="text" class="form-control" name="seller" placeholder="Seller">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="buyer" placeholder="Buyer">
+								</div>
+								<div class="form-group">
+									<input type="number" class="form-control" name="sold_price" placeholder="Sold Price">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control datetime" name="closing_date" placeholder="Closing Date">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="Type" placeholder="Type">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="status" placeholder="Status">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="address" placeholder="Address">
+								</div>
+								<button type="submit" class="btn btn-block btn-primary">Submit</button>
+							</form>
+						
+						<br />
+							<div class="table-responsive">
+								<table class="table" id="sales">
+									<thead>
+										<tr>
+											<th scope="col">Seller</th>
+											<th scope="col">Buyer</th>
+											<th scope="col">Sold_Price</th>
+											<th scope="col">Closing_Date</th>
+											<th scope="col">Type</th>
+											<th scope="col">Status</th>
+											<th scope="col">Address</th>
+										</tr>
+									</thead>
+									<tbody>
+									{% for sale in sales %}
+										<tr id={{ sales.id }}>
+											<th scope="row">{{ sales.seller }}</th>
+											<td> {{ sale.buyer }}</td>
+											<td> {{ sale.sold_price }}</td>
+											<td> {{ sale.closing_date }}</td>
+											<td> {{ sale.Type }}</td>
+											<td> {{ sale.status }}</td>
+											<td> {{ sales.address }}</td>
+											<td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
+										</tr>
+									{% endfor %}
+									</tbody>
+								</table>
+							</div>
+					<!-- /pusherRow -->
 				
+					
 				</div>
 				
 				<!-- Footer -->
@@ -626,5 +534,15 @@
 		<!-- Init JavaScript -->
 		<script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
 
+	<!-- For pusher -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
+
+    <script src="{{ url_for('static', filename='custom.js')}}"></script>
 	</body>
 </html>

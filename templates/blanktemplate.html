@@ -13,13 +13,19 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	
 	<!-- Data table CSS -->
-    <link href="../vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- Toast CSS -->
-    <link href="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-	<link href="../full-width-light/dist/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css')}}" rel="stylesheet" type="text/css">
+    
+    <!-- Pusher CSS -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	
 </head>
 
@@ -36,7 +42,7 @@
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
                         <a href="index.html">
-                            <img class="brand-img" src="../img/logo.png" alt="brand" />
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png')}}" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -176,7 +182,31 @@
 				<!-- Row -->
 				
 				<!-- /Row -->
-
+                <form method="POST" id="target"> 
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="seller" value="{{data.seller}}" placeholder="Seller">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="buyer" value="{{data.buyer}}" placeholder="Buyer">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="sold_price" value="{{data.sold_price}}"placeholder="Sold Price">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control datetime" name="closing_date" value="{{data.closing_date}}" placeholder="Closing Date">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Type" value="{{data.Type}}" placeholder="Type">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="status" value="{{data.status}}" placeholder="Status">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="address" value="{{data.address}}" placeholder="Address">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block btn-primary">Update</button>
+                    </form>
 					
 
 			<!-- Footer -->
@@ -198,70 +228,82 @@
 	<!-- JavaScript -->
 
     <!-- jQuery -->
-    <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-	<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
     <!-- Data table JavaScript -->
-	<script src="../vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js')}}"></script>
 	
 	<!-- Flot Charts JavaScript -->
-	<script src="../vendors/bower_components/Flot/excanvas.min.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.pie.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.resize.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.time.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.stack.js"></script>
-	<script src="../vendors/bower_components/Flot/jquery.flot.crosshair.js"></script>
-	<script src="../vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-	<script src="../full-width-light/dist/js/flot-data.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/excanvas.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.pie.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.resize.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.time.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.stack.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.crosshair.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='full-width-light/dist/js/flot-data.js')}}"></script>
 
     <!-- Slimscroll JavaScript -->
-    <script src="../full-width-light/dist/js/jquery.slimscroll.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js')}}"></script>
 
     <!-- simpleWeather JavaScript -->
-    <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
-    <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
-	<script src="../full-width-light/dist/js/simpleweather-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='full-width-light/dist/js/simpleweather-data.js')}}"></script>
 	
 	<!-- Progressbar Animation JavaScript -->
-	<script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js')}}"></script>
 
     <!-- EChartJS JavaScript -->
-    <script src="../vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
-    <script src="../vendors/echarts-liquidfill.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendors/echarts-liquidfill.min.js')}}"></script>
 
     <!-- Progressbar Animation JavaScript -->
-    <script src="../vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="../vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js')}}"></script>
 
     <!-- Fancy Dropdown JS -->
-    <script src="../full-width-light/dist/js/dropdown-bootstrap-extended.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js')}}"></script>
 
     <!-- Sparkline JavaScript -->
-    <!-- <script src="../vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='vendors/jquery.sparkline/dist/jquery.sparkline.min.js')}}"></script> -->
 
     <!-- Owl JavaScript -->
-    <script src="../vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
     <!-- Toast JavaScript -->
-    <!-- <script src="../vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js')}}"></script> -->
 
     <!-- Piety JavaScript -->
-    <script src="../vendors/bower_components/peity/jquery.peity.min.js"></script>
-    <script src="../full-width-light/dist/js/peity-data.js"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/peity-data.js')}}"></script>
 
     <!-- Switchery JavaScript -->
-	<script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js')}}"></script>
 	
 	<!-- Bootstrap Select JavaScript -->
-	<script src="../vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
 
     <!-- Init JavaScript -->
-    <script src="../full-width-light/dist/js/init.js"></script>
-    <script src="../full-width-light/dist/js/dashboard6-data.js"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js')}}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js')}}"></script>
+
+
+    <!-- Pusher JS and scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
+
+    <script src="{{ url_for('static', filename='custom.js')}}"></script>
 </body>
 
 </html>
