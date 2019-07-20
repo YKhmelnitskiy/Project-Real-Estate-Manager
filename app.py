@@ -16,7 +16,7 @@ app = Flask(__name__)
 #Creating database
 #################
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/RealEstate.sqlite"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/RealEstate.sqlite"
 
 db = SQLAlchemy(app)
 #I added this from the pusher ###############
@@ -32,86 +32,86 @@ def shutdown_session(exception=None):
     db_session.remove()
 ######################end of pusher
 
-class Address(db.Model):
-    __tablename__ = 'address'
-    id = db.Column(db.Integer, primary_key=True)
-    address = db.Column(db.String(64))
-    bedrooms = db.Column(db.Integer)
-    bathrooms = db.Column(db.Integer)
-    area = db.Column(db.Integer)
-    city = db.Column(db.String(64))
-    state = db.Column(db.String(64))
+# class Address(db.Model):
+#     __tablename__ = 'address'
+#     id = db.Column(db.Integer, primary_key=True)
+#     address = db.Column(db.String(64))
+#     bedrooms = db.Column(db.Integer)
+#     bathrooms = db.Column(db.Integer)
+#     area = db.Column(db.Integer)
+#     city = db.Column(db.String(64))
+#     state = db.Column(db.String(64))
 
-    # def __init__(self, address, bedrooms, bathrooms, area, city, state):
-    #     self.address = address
-    #     self.bedrooms = bedrooms
-    #     self.bathrooms = bathrooms
-    #     self.area = area
-    #     self.city = city
-    #     self.state = state
+#     # def __init__(self, address, bedrooms, bathrooms, area, city, state):
+#     #     self.address = address
+#     #     self.bedrooms = bedrooms
+#     #     self.bathrooms = bathrooms
+#     #     self.area = area
+#     #     self.city = city
+#     #     self.state = state
 
-    def __repr__(self):
-        return '<Table %r>' % (self.address)
+#     def __repr__(self):
+#         return '<Table %r>' % (self.address)
 
-class Buyers(db.Model):
-    __tablename__ = 'buyers_list'
-    field1 = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64))
-    age = db.Column(db.Integer)
-    price = db.Column(db.Integer)
-    date = db.Column(db.DateTime)
-    agent = db.Column(db.String(64))
+# class Buyers(db.Model):
+#     __tablename__ = 'buyers_list'
+#     field1 = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(64))
+#     age = db.Column(db.Integer)
+#     price = db.Column(db.Integer)
+#     date = db.Column(db.DateTime)
+#     agent = db.Column(db.String(64))
 
-    # def __init__(self, name, age, price, date, agent):
-    #     self.name = name
-    #     self.age = age
-    #     self.price = price
-    #     self.date = date
-    #     self.agent = agent
+#     # def __init__(self, name, age, price, date, agent):
+#     #     self.name = name
+#     #     self.age = age
+#     #     self.price = price
+#     #     self.date = date
+#     #     self.agent = agent
 
-    def __repr__(self):
-        return '<Table %r>' % (self.name)
+#     def __repr__(self):
+#         return '<Table %r>' % (self.name)
 
-class Pipeline(db.Model):
-    __tablename__ = 'pipeline_list'
-    id = db.Column(db.Integer, primary_key=True)
-    Name = db.Column(db.String(64))
-    Last_Name = db.Column(db.String(64))
-    Zip_Code = db.Column(db.Integer)
-    City = db.Column(db.String)
-    State = db.Column(db.String(64))
-    Email = db.Column(db.String(64))
-    Phone_Number = db.Column(db.String(64))
-    Company = db.Column(db.String(64))
-    Title = db.Column(db.String(64))
-    Last_Contact = db.Column(db.DateTime)
-    Budget = db.Column(db.Integer)
-    Agent = db.Column(db.String(64))
+# class Pipeline(db.Model):
+#     __tablename__ = 'pipeline_list'
+#     id = db.Column(db.Integer, primary_key=True)
+#     Name = db.Column(db.String(64))
+#     Last_Name = db.Column(db.String(64))
+#     Zip_Code = db.Column(db.Integer)
+#     City = db.Column(db.String)
+#     State = db.Column(db.String(64))
+#     Email = db.Column(db.String(64))
+#     Phone_Number = db.Column(db.String(64))
+#     Company = db.Column(db.String(64))
+#     Title = db.Column(db.String(64))
+#     Last_Contact = db.Column(db.DateTime)
+#     Budget = db.Column(db.Integer)
+#     Agent = db.Column(db.String(64))
     
-    # def __init__(self, Name, Last_Name, Zip_Code, City, State, Email, Phone_Number, Company, Title, Last_Contact, Budget, Agent):
-    #     self.First_Name = Name
-    #     self.Last_Name = Last_Name
-    #     self.Zip_Code = Zip_Code
-    #     self.City = City
-    #     self.State = State
-    #     self.Email = Email
-    #     self.Phone_Number = Phone_Number
-    #     self.Company = Company
-    #     self.Title = Title
-    #     self.Last_Contact = Last_Contact
-    #     self.Budget = Budget
-    #     self.Agent = Agent
+#     # def __init__(self, Name, Last_Name, Zip_Code, City, State, Email, Phone_Number, Company, Title, Last_Contact, Budget, Agent):
+#     #     self.First_Name = Name
+#     #     self.Last_Name = Last_Name
+#     #     self.Zip_Code = Zip_Code
+#     #     self.City = City
+#     #     self.State = State
+#     #     self.Email = Email
+#     #     self.Phone_Number = Phone_Number
+#     #     self.Company = Company
+#     #     self.Title = Title
+#     #     self.Last_Contact = Last_Contact
+#     #     self.Budget = Budget
+#     #     self.Agent = Agent
 
-    def __repr__(self):
-        return '<Table %r>' % (self.First_Name)
+#     def __repr__(self):
+#         return '<Table %r>' % (self.First_Name)
         
 #############
 #Routes     #
 #############
 
-@app.before_first_request
-def setup():
-    db.create_all()
+# @app.before_first_request
+# def setup():
+#     db.create_all()
     #recreate database each time for demo
     # db.drop_all
     
@@ -129,32 +129,32 @@ def setup():
 @app.route("/")
 def dashboard():
     """Return to the dashboard."""
-    count = db.session.query(func.count(Buyers.field1)).scalar()
+    # count = db.session.query(func.count(Buyers.field1)).scalar()
     #hi = db.session.query(func.count(Address.id)).scalar()
     
-    print (count)
     #print (hi)
-    return render_template("index6.html", count=count)
+    # return render_template("index6.html", count=count)
+    return render_template("index6.html")
 
-@app.route("/Registration", methods = ["GET", "POST"])
-def registration():
+# @app.route("/Registration", methods = ["GET", "POST"])
+# def registration():
     
-    if request.method == "POST":
-        address = request.form["address"]
-        bedrooms = request.form["bedrooms"]
-        bathrooms = request.form["bathrooms"]
-        area = request.form["area"] #sqaure footage
-        city = request.form["city"]
-        state = request.form["state"]
+#     if request.method == "POST":
+#         address = request.form["address"]
+#         bedrooms = request.form["bedrooms"]
+#         bathrooms = request.form["bathrooms"]
+#         area = request.form["area"] #sqaure footage
+#         city = request.form["city"]
+#         state = request.form["state"]
 
-        Listing = Address(address=address, bedrooms=bedrooms, bathrooms=bathrooms, area=area, city=city, state=state)
+#         Listing = Address(address=address, bedrooms=bedrooms, bathrooms=bathrooms, area=area, city=city, state=state)
         
-        db.session.add(Listing)
-        db.session.commit()
+#         db.session.add(Listing)
+#         db.session.commit()
 
-        return "Thanks for the form data!"
+#         return "Thanks for the form data!"
 
-    return render_template("registration.html")
+#     return render_template("registration.html")
 
 @app.route('/api/data')
 def list_addresses():
