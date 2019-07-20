@@ -1,0 +1,3 @@
+date,street_1,street_2,city,state,zip,sale_price,lat,long,location
+6/8/2019,20765 Saratoga Dr,,Fairview Park,OH,44236,100000.00,41.44,-81.85,"[41.44,-81.85]"
+6/9/2019,1 Center Court,,Cleveland,OH,44144,50000.00,41.49,-81.68,"[41.49,-81.68]"
