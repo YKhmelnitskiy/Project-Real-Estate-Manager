@@ -1,541 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>Real Estate CRM </title>
-		<meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
-		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
-		<meta name="author" content="hencework"/>
-		
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-		<!-- Calendar CSS -->
-		<link href="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet" type="text/css"/>
-		
-		<!-- vector map CSS -->
-		<!-- <link href="{{ url_for('static', filename='vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/> -->
-		<link href="{{ url_for('static', filename='vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-		<link href="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-		
-		<!-- Custom CSS -->
-		<link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
-		    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Real Estate CRM</title>
+    <meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
+    <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+    <meta name="author" content="hencework" />
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<!-- Added from Pusher down below -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	
+    <!-- Calendar CSS -->
+    <link href="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
 
-	</head>
-	
-	<body>
-		<!--Preloader-->
-		<div class="preloader-it">
-			<div class="la-anim-1"></div>
-		</div>
-		<!--/Preloader-->
-		
-		<div class="wrapper  theme-1-active pimary-color-green">
-		
-			<!-- Top Menu Items -->
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="mobile-only-brand pull-left">
-					<div class="nav-header pull-left">
-						<div class="logo-wrap">
-							<a href="/index">
-								<img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
-								<span class="brand-text">RealEZ</span>
-							</a>
-						</div>
-					</div>
-					<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu"></i></a>
-					<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
-					<a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
-					<form id="search_form" role="search" class="top-nav-search collapse pull-left">
-						<div class="input-group">
-							<input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
-							<span class="input-group-btn">
-							<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
-							</span>
-						</div>
-					</form>
-				</div>
-				<div id="mobile_only_nav" class="mobile-only-nav pull-right">
-					<ul class="nav navbar-right top-nav pull-right">
-						
-					</ul>
-				</div>
-			</nav>
-			<!-- /Top Menu Items -->
-			
-			<!-- Left Sidebar Menu -->
-			<div class="fixed-sidebar-left">
-				<ul class="nav navbar-nav side-nav nicescroll-bar">
-					<li class="navigation-header">
-						<span>Main</span>
-						<i class="zmdi zmdi-more"></i>
-					</li>
-					<li>
-						<a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr">
-							<div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div>
-							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
-							<div class="clearfix"></div>
-						</a>
-						<ul id="dashboard_dr" class="collapse collapse-level-1">
-							
-							<li>
-								<a class="active-page" href="/index6">General Dashboard</a>
-							</li>
+    <!-- Data table CSS -->
+    <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
 
-							<li>
-								<a href="/index">Personal Dashboard</a>
-							</li>
-	
-							
-						</ul>
-					</li>
-	
-					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr">
-							<div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">Apps </span></div>
-							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
-							<div class="clearfix"></div>
-						</a>
-						<ul id="app_dr" class="collapse collapse-level-1">
-							<li>
-								<a href="/chats">chats</a>
-							</li>
-							<li>
-								<a href="/calendar">calendar</a>
-							</li>
-							<li>
-								<a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
-								<ul id="email_dr" class="collapse collapse-level-2">
-									<li>
-										<a href="/inbox">inbox</a>
-									</li>
-									<li>
-										<a href="/inbox-detail">detail email</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
-								<ul id="contact_dr" class="collapse collapse-level-2">
-									<li>
-										<a href="/contact-list">list</a>
-									</li>
-									<li>
-										<a href="/contact-card">cards</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="/file-manager">File Manager</a>
-							</li>
-							
-						</ul>
-					</li>
-					<li>
-						<hr class="light-grey-hr mb-10" />
-					</li>
-					<li class="navigation-header">
-						<span>component</span>
-						<i class="zmdi zmdi-more"></i>
-					</li>
-	
-					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#form_dr">
-							<div class="pull-left"><i class="zmdi zmdi-edit mr-20"></i><span class="right-nav-text">Forms</span></div>
-							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
-							<div class="clearfix"></div>
-						</a>
-						<ul id="form_dr" class="collapse collapse-level-1 two-col-list">
-							<li>
-								<a href="/form-layout">Customer Form</a>
-							</li>
-							
-						</ul>
-					</li>
-	
-					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
-							<div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
-							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
-							<div class="clearfix"></div>
-						</a>
-						<ul id="table_dr" class="collapse collapse-level-1 two-col-list">
-								<li>
-									<a href="/machinelearning">Machine Learning</a>
-								</li>
-						</ul>
-					</li>
-	
-				</ul>
-			</div>
-			<!-- /Left Sidebar Menu -->
-			
-			<!-- Right Sidebar Menu -->
-			<!-- /Right Sidebar Menu -->
-			
-			<!-- Right Sidebar Backdrop -->
-			<!-- <div class="right-sidebar-backdrop"></div> -->
-			<!-- /Right Sidebar Backdrop -->
-				
-			<!-- Main Content -->
-			<div class="page-wrapper">
-				<div class="container-fluid">
-					
-					<!-- Title -->
-					<div class="row heading-bg">
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-							<h5 class="txt-dark">Customer Set Up</h5>
-						</div>
-					
-						<!-- Breadcrumb -->
-						<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-							<ol class="breadcrumb">
-								<li><a href="/index">Dashboard</a></li>
-								<li><a href="#"><span>form</span></a></li>
-								<li class="active"><span>form-layout</span></li>
-							</ol>
-						</div>
-						<!-- /Breadcrumb -->
-					
-					</div>
-					<!-- /Title -->			
-					<!-- Row -->
-					<div class="row">
-						<div class="col-md-12">
-							<div class="panel panel-default card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">Generals</h6>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-wrap">
-													
-														<div class="form-actions mt-10">
-															<div class="row">
-																<div class="col-md-6">
-																	<div class="row">
-																		<div class="col-md-offset-3 col-md-9">
-																			<button type="submit" class="btn btn-success  mr-10">Submit</button>
-																			<button type="button" class="btn btn-default">Cancel</button>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-md-6"> </div>
-															</div>
-														</div>
-													</form>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /Row -->
-					
-					<!-- /Row -->
+    <!-- Toast CSS -->
+    <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
-					<div class="form-row">
-					<div class="col-md-4">
-						<div class="panel panel-default card-view">
-							<div class="panel-heading">
-								<div class="pull-left">
-									<h6 class="panel-title txt-dark">Checkbox Circle</h6>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="panel-wrapper collapse in">
-								<div class="panel-body">
-									<p class="text-muted"> Mark all the options that meet your criteria </p> 
-									<div class="row mt-10">
-										<div class="col-sm-12">
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox7" type="checkbox">
-												<label for="checkbox7"> Simply Rounded </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox8" type="checkbox" checked>
-												<label for="checkbox8"> Info </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox-9" type="checkbox">
-												<label for="checkbox-9"> Primary </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox-10" type="checkbox" checked>
-												<label for="checkbox-10"> Success </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox-11" type="checkbox">
-												<label for="checkbox-11"> Warning </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox-12" type="checkbox" checked>
-												<label for="checkbox-12"> Danger </label>
-											</div>
-											<div class="checkbox checkbox-success checkbox-circle">
-												<input id="checkbox-15" type="checkbox" checked>
-												<label for="checkbox-15"> Inverse </label>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
 
-					<!--Select Boxes begins-->
-					
-					<div class="col-md-6">
-						<div class="panel panel-default card-view">
-							<div class="panel-heading">
-								<div class="pull-left">
-									<h6 class="panel-title txt-dark">Bootstrap Select boxes</h6>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="panel-wrapper collapse in">
-								<div class="panel-body">
-									<p class="text-muted">Just add bootstrap-select-min.js and same css & add class <code>.selectpicker</code></p>
-									<div class="form-wrap mt-40">
-										<form>
-											<div class="row">
-												<div class="col-md-12">
-													<div class="form-group">
-														<label class="control-label mb-10">Select box</label>
-														<select class="selectpicker" data-style="form-control btn-default btn-outline">
-															<option>Mustard</option>
-															<option>Ketchup</option>
-															<option>Relish</option>
-														</select>
-													</div>	
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<label class="control-label mb-10">Select boxes with optgroups</label>
-														<select class="selectpicker" data-style="form-control btn-default btn-outline">
-															<optgroup label="Picnic">
-																<option>Mustard</option>
-																<option>Ketchup</option>
-																<option>Relish</option>
-															</optgroup>
-															<optgroup label="Camping">
-																<option>Tent</option>
-																<option>Flashlight</option>
-																<option>Toilet Paper</option>
-															</optgroup>
-														</select>
-													</div>
-												</div>	
-												<div class="col-md-12">
-													<div class="form-group">
-														<label class="control-label mb-10">Multiple select boxes</label>
-														<select class="selectpicker" multiple data-style="form-control btn-default btn-outline">
-															<option>Mustard</option>
-															<option>Ketchup</option>
-															<option>Relish</option>
-														</select>
-													</div>	
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!--Select boxes ends-->	
-				</div>
-					<!-- /Row -->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-it">
+        <div class="la-anim-1"></div>
+    </div>
+    <!-- /Preloader -->
+    <div class="wrapper  theme-5-active pimary-color-green">
+        <!-- Top Menu Items -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="mobile-only-brand pull-left">
+                <div class="nav-header pull-left">
+                    <div class="logo-wrap">
+                        <a href="/index">
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
+                            <span class="brand-text">RealEZ</span>
+                        </a>
+                    </div>
+                </div>
+                <a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu"></i></a>
+                <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
+                <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+                <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+                    <div class="input-group">
+                        <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+						<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+						</span>
+                    </div>
+                </form>
+            </div>
+            <div id="mobile_only_nav" class="mobile-only-nav pull-right">
+                <ul class="nav navbar-right top-nav pull-right">
+
+                </ul>
+            </div>
+        </nav>
+        <!-- /Top Menu Items -->
+
+        <!-- Left Sidebar Menu -->
+        <div class="fixed-sidebar-left">
+            <ul class="nav navbar-nav side-nav nicescroll-bar">
+                <li class="navigation-header">
+                    <span>Main</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+                <li>
+                    <a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="dashboard_dr" class="collapse collapse-level-1">
+                        <li>
+                            <a class="active-page" href="/">General Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/index">Personal Dashboard</a>
+                        </li>
 
 
-					<!-- Row -->
-					<div class="row">
-						<div class="col-md-12">
-							<div class="panel panel-default card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">Additional Comments</h6>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<textarea class="tinymce"></textarea>
-									</div>
-								</div>
-							</div>
-						</div>
-					
 
-					<!-- /pusherRow -->
-							<form method="POST" id="target"> 
-								<div class="form-group">
-									<input type="text" class="form-control" name="seller" placeholder="Seller">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" name="buyer" placeholder="Buyer">
-								</div>
-								<div class="form-group">
-									<input type="number" class="form-control" name="sold_price" placeholder="Sold Price">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control datetime" name="closing_date" placeholder="Closing Date">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" name="Type" placeholder="Type">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" name="status" placeholder="Status">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" name="address" placeholder="Address">
-								</div>
-								<button type="submit" class="btn btn-block btn-primary">Submit</button>
-							</form>
-						
-						<br />
-							<div class="table-responsive">
-								<table class="table" id="sales">
-									<thead>
-										<tr>
-											<th scope="col">Seller</th>
-											<th scope="col">Buyer</th>
-											<th scope="col">Sold_Price</th>
-											<th scope="col">Closing_Date</th>
-											<th scope="col">Type</th>
-											<th scope="col">Status</th>
-											<th scope="col">Address</th>
-										</tr>
-									</thead>
-									<tbody>
-									{% for sale in sales %}
-										<tr id={{ sales.id }}>
-											<th scope="row">{{ sales.seller }}</th>
-											<td> {{ sale.buyer }}</td>
-											<td> {{ sale.sold_price }}</td>
-											<td> {{ sale.closing_date }}</td>
-											<td> {{ sale.Type }}</td>
-											<td> {{ sale.status }}</td>
-											<td> {{ sales.address }}</td>
-											<td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
-										</tr>
-									{% endfor %}
-									</tbody>
-								</table>
-							</div>
-					<!-- /pusherRow -->
-				
-					
-				</div>
-				
-				<!-- Footer -->
-				<footer class="footer container-fluid pl-30 pr-30">
-					<div class="row">
-						<div class="col-sm-12">
-							<p>2019 CWR Data Analytics Bootcamp - Final Project</p>
-						</div>
-					</div>
-				</footer>
-				<!-- /Footer -->
-			
-			</div>
-			<!-- /Main Content -->
-		
-		</div>
-		<!-- /#wrapper -->
-		
-		<!-- JavaScript -->
-		
-		<!-- jQuery -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
-		
-		<!-- Bootstrap Core JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-		<!-- <script src="{{ url_for('static', filename='vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js') }}"></script> -->
+                    </ul>
+                </li>
 
-		<!-- Calender JavaScripts -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/jquery-ui.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='full-width-light/dist/js/fullcalendar-data.js') }}"></script>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">Apps </span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="app_dr" class="collapse collapse-level-1">
+                        <li>
+                            <a href="/chats">chats</a>
+                        </li>
+                        <li>
+                            <a href="/calendar">calendar</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#email_dr">Email<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="email_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="/inbox">inbox</a>
+                                </li>
+                                <li>
+                                    <a href="/inbox-detail">detail email</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr">Contacts<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                            <ul id="contact_dr" class="collapse collapse-level-2">
+                                <li>
+                                    <a href="/contact-list">list</a>
+                                </li>
+                                <li>
+                                    <a href="/contact-card">cards</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/file-manager">File Manager</a>
+                        </li>
 
-		<!-- Moment JavaScript -->
-		<script type="text/javascript" src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment-with-locales.min.js') }}"></script>
+                    </ul>
+                </li>
+                <li>
+                    <hr class="light-grey-hr mb-10" />
+                </li>
+                <li class="navigation-header">
+                    <span>component</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
 
-		<!-- Bootstrap Colorpicker JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#form_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-edit mr-20"></i><span class="right-nav-text">Forms</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="form_dr" class="collapse collapse-level-1 two-col-list">
+                        <li>
+                            <a href="/form-layout">Customer Form</a>
+                        </li>
 
-		<!-- Tinymce JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/tinymce/tinymce.min.js') }}"></script>
-			
-		<!-- Tinymce Wysuhtml5 Init JavaScript -->
-		<script src="{{ url_for('static', filename='full-width-light/dist/js/tinymce-data.js') }}"></script>
+                    </ul>
+                </li>
 
-		<!-- Select2 JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
-		
-		<!-- Bootstrap Select JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
-		
-		<!-- Bootstrap Tagsinput JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
-		
-		<!-- Bootstrap Touchspin JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js') }}"></script>
-		
-		<!-- Multiselect JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/multiselect/js/jquery.multi-select.js') }}"></script>
-		
-		 
-		<!-- Bootstrap Switch JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js') }}"></script>
-		
-		<!-- Bootstrap Datetimepicker JavaScript -->
-		<script type="text/javascript" src="{{ url_for('static', filename='vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
-		
-		<!-- Form Advance Init JavaScript -->
-		<script src="{{ url_for('static', filename='full-width-light/dist/js/form-advance-data.js') }}"></script>
-		
-		<!-- Slimscroll JavaScript -->
-		<script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
-	
-		<!-- Fancy Dropdown JS -->
-		<script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
-		
-		<!-- Owl JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-	
-		<!-- Switchery JavaScript -->
-		<script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
-	
-		<!-- Init JavaScript -->
-		<script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#table_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-format-size mr-20"></i><span class="right-nav-text">Data Science</span></div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                        <div class="clearfix"></div>
+                    </a>
+                    <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
+                        <li>
+                            <a href="/machinelearning">Machine Learning</a>
+                        </li>
+                    </ul>
+                </li>
 
-	<!-- For pusher -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            </ul>
+        </div>
+        <!-- /Left Sidebar Menu -->
+
+
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="container-fluid">
+
+                <!-- Title -->
+                <div class="row heading-bg">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h5 class="txt-dark">Customer Set Up</h5>
+                    </div>
+
+                    <!-- Breadcrumb -->
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="/index">Dashboard</a></li>
+                            <li><a href="#"><span>form</span></a></li>
+                            <li class="active"><span>form-layout</span></li>
+                        </ol>
+                    </div>
+                    <!-- /Breadcrumb -->
+
+                </div>
+
+                <!-- /pusherRow -->
+                <form method="POST" id="target">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="seller" placeholder="Seller">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="buyer" placeholder="Buyer">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" name="sold_price" placeholder="Sold Price">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control datetime" name="closing_date" placeholder="Closing Date">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="Type" placeholder="Type">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="status" placeholder="Status">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" name="address" placeholder="Address">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                </form>
+
+                <br />
+                <div class="table-responsive table-striped table-hover">
+                    <table class="table" id="sales">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Seller</th>
+                                <th scope="col">Buyer</th>
+                                <th scope="col">Sold_Price</th>
+                                <th scope="col">Closing_Date</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for sale in sales %}
+                            <tr id={{ sales.id }}>
+                                <th scope="row">{{ sales.seller }}</th>
+                                <td> {{ sale.buyer }}</td>
+                                <td> {{ sale.sold_price }}</td>
+                                <td> {{ sale.closing_date }}</td>
+                                <td> {{ sale.Type }}</td>
+                                <td> {{ sale.status }}</td>
+                                <td> {{ sales.address }}</td>
+                                <td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /pusherRow -->
+
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer container-fluid pl-30 pr-30">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>2019 CWR Data Analytics Bootcamp - Final Project</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- /Footer -->
+
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- JavaScript -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js') }}"></script> -->
+
+    <!-- Calender JavaScripts -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/fullcalendar-data.js') }}"></script>
+
+    <!-- Moment JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment-with-locales.min.js') }}"></script>
+
+    <!-- Bootstrap Colorpicker JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+
+    <!-- Tinymce JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/tinymce/tinymce.min.js') }}"></script>
+
+    <!-- Tinymce Wysuhtml5 Init JavaScript -->
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/tinymce-data.js') }}"></script>
+
+    <!-- Select2 JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+
+    <!-- Bootstrap Select JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+
+    <!-- Bootstrap Tagsinput JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
+
+    <!-- Bootstrap Touchspin JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js') }}"></script>
+
+    <!-- Multiselect JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/multiselect/js/jquery.multi-select.js') }}"></script>
+
+
+    <!-- Bootstrap Switch JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js') }}"></script>
+
+    <!-- Bootstrap Datetimepicker JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+    <!-- Form Advance Init JavaScript -->
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/form-advance-data.js') }}"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
+
+    <!-- Owl JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+
+    <!-- Switchery JavaScript -->
+    <script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
+
+    <!-- Init JavaScript -->
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
+
+    <!-- For pusher -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
 
@@ -544,5 +353,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
 
     <script src="{{ url_for('static', filename='custom.js')}}"></script>
-	</body>
+</body>
+
 </html>
