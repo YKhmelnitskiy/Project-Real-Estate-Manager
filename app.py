@@ -43,10 +43,10 @@ def dashboard():
     """Return to the dashboard."""
     # count = db.session.query(func.count(Buyers.field1)).scalar()
     #hi = db.session.query(func.count(Address.id)).scalar()
-    
-    #print (hi)
+    count = Sales.query.count()
+    print (count)
     # return render_template("index6.html", count=count)
-    return render_template("index6.html")
+    return render_template("index6.html",count=count)
 
 # @app.route("/Registration", methods = ["GET", "POST"])
 # def registration():
