@@ -242,13 +242,13 @@
                         <tbody>
                             {% for sale in sales %}
                             <tr id={{ sales.id }}>
-                                <th scope="row">{{ sales.seller }}</th>
+                                <th scope="row">{{ sale.seller }}</th>
                                 <td> {{ sale.buyer }}</td>
                                 <td> {{ sale.sold_price }}</td>
                                 <td> {{ sale.closing_date }}</td>
                                 <td> {{ sale.Type }}</td>
                                 <td> {{ sale.status }}</td>
-                                <td> {{ sales.address }}</td>
+                                <td> {{ sale.address }}</td>
                                 <td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
                             </tr>
                             {% endfor %}
@@ -264,7 +264,7 @@
             <footer class="footer container-fluid pl-30 pr-30">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>2019 CWR Data Analytics Bootcamp - Final Project</p>
+                        <p>2019 CWRU Data Analytics Bootcamp - Final Project</p>
                     </div>
                 </div>
             </footer>
