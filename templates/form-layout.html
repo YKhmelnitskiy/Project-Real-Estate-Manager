@@ -40,7 +40,7 @@
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
                         <a href="/index">
-                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo2.png') }}" width="40" height="40" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -177,7 +177,7 @@
         <div class="page-wrapper">
             <div class="container-fluid">
 
-                <!-- Title -->
+                <!-- Title begins-->
                 <div class="row heading-bg">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h5 class="txt-dark">Customer Set Up</h5>
@@ -194,6 +194,8 @@
                     <!-- /Breadcrumb -->
 
                 </div>
+
+                <!-- /Title ends-->
 
                 <!-- /pusherRow -->
                 <form method="POST" id="target">
@@ -219,43 +221,77 @@
                             <input type="text" class="form-control" name="status" placeholder="Status">
                         </div>
                     </div>
-                    <div class="form-group col-md-4">
-                        <input type="text" class="form-control" name="address" placeholder="Address">
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input type="text" class="form-control" name="address" placeholder="Address">
+                        </div>
+                        <!-- <div class="custom-file">
+                            <div class="form-group col-md-4">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+
+                            </div>
+                        </div> -->
                     </div>
-                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                    </div>
                 </form>
 
-                <br />
-                <div class="table-responsive table-striped table-hover">
-                    <table class="table" id="sales">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Seller</th>
-                                <th scope="col">Buyer</th>
-                                <th scope="col">Sold_Price</th>
-                                <th scope="col">Closing_Date</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Address</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for sale in sales %}
-                            <tr id={{ sales.id }}>
-                                <th scope="row">{{ sale.seller }}</th>
-                                <td> {{ sale.buyer }}</td>
-                                <td> {{ sale.sold_price }}</td>
-                                <td> {{ sale.closing_date }}</td>
-                                <td> {{ sale.Type }}</td>
-                                <td> {{ sale.status }}</td>
-                                <td> {{ sale.address }}</td>
-                                <td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                <!--Browse files begins-->
+
+                <div class="col-lg-6 col-sm-6 col-12">
+                    <!-- <h4>Input Groups</h4> -->
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                                <span class="btn btn-success">
+                                    Browse&hellip; <input type="file" style="display: none;" multiple>
+                                </span>
+                            </label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
                 </div>
-                <!-- /pusherRow -->
+
+                <!--/Browse files ends-->
+
+                <br />
+
+                <!--Table begins-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive table-striped table-hover">
+                            <table class="table" id="sales">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Seller</th>
+                                        <th scope="col">Buyer</th>
+                                        <th scope="col">Sold_Price</th>
+                                        <th scope="col">Closing_Date</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for sale in sales %}
+                                    <tr id={{ sales.id }}>
+                                        <th scope="row">{{ sales.seller }}</th>
+                                        <td> {{ sale.buyer }}</td>
+                                        <td> {{ sale.sold_price }}</td>
+                                        <td> {{ sale.closing_date }}</td>
+                                        <td> {{ sale.Type }}</td>
+                                        <td> {{ sale.status }}</td>
+                                        <td> {{ sales.address }}</td>
+                                        <td> <a href="/edit/{{ sale.id }}">Edit</a> </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Table ends -->
 
 
             </div>

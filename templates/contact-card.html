@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Real Estate CRM</title>
-	<meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
-	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
-	<meta name="author" content="hencework"/>
-	
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	
-	<!-- Data table CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Real Estate CRM</title>
+    <meta name="description" content="Real Estate is a Dashboard & Admin Site Responsive Template." />
+    <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+    <meta name="author" content="hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Data table CSS -->
     <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- Toast CSS -->
     <link href="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-	<link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
-	
+    <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-	<!-- Preloader -->
-	<div class="preloader-it">
-		<div class="la-anim-1"></div>
-	</div>
-	<!-- /Preloader -->
+    <!-- Preloader -->
+    <div class="preloader-it">
+        <div class="la-anim-1"></div>
+    </div>
+    <!-- /Preloader -->
     <div class="wrapper  theme-5-active pimary-color-green">
-		<!-- Top Menu Items -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- Top Menu Items -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="mobile-only-brand pull-left">
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
                         <a href="/index">
-                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo2.png') }}" width="40" height="40" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -55,14 +56,14 @@
             </div>
             <div id="mobile_only_nav" class="mobile-only-nav pull-right">
                 <ul class="nav navbar-right top-nav pull-right">
-                    
+
                 </ul>
             </div>
         </nav>
-		<!-- /Top Menu Items -->
-		
-		<!-- Left Sidebar Menu -->
-		<div class="fixed-sidebar-left">
+        <!-- /Top Menu Items -->
+
+        <!-- Left Sidebar Menu -->
+        <div class="fixed-sidebar-left">
             <ul class="nav navbar-nav side-nav nicescroll-bar">
                 <li class="navigation-header">
                     <span>Main</span>
@@ -75,15 +76,15 @@
                         <div class="clearfix"></div>
                     </a>
                     <ul id="dashboard_dr" class="collapse collapse-level-1">
-						<li>
-							<a class="active-page" href="/">General Dashboard</a>
-						</li>
-						<li>
+                        <li>
+                            <a class="active-page" href="/">General Dashboard</a>
+                        </li>
+                        <li>
                             <a href="/index">Personal Dashboard</a>
                         </li>
 
-                        
-                        
+
+
                     </ul>
                 </li>
 
@@ -125,7 +126,7 @@
                         <li>
                             <a href="/file-manager">File Manager</a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li>
@@ -146,7 +147,7 @@
                         <li>
                             <a href="/form-layout">Customer Form</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -157,733 +158,733 @@
                         <div class="clearfix"></div>
                     </a>
                     <ul id="table_dr" class="collapse collapse-level-1 two-col-list">
-							<li>
-								<a href="/machinelearning">Machine Learning</a>
-							</li>
+                        <li>
+                            <a href="/machinelearning">Machine Learning</a>
+                        </li>
                     </ul>
                 </li>
 
             </ul>
         </div>
-		<!-- /Left Sidebar Menu -->
+        <!-- /Left Sidebar Menu -->
 
         <!-- Main Content -->
-		<div class="page-wrapper">
+        <div class="page-wrapper">
             <div class="container-fluid pt-25">
 
                 <!-- Row -->
-                
+
                 <div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-danger contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-danger contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Clay Masse
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2014</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$12000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-success contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15"> 
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user1.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2014</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$12000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-success contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user1.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Evie Ono
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												developer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">02-10-2014</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$14000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-warning contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">02-10-2014</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$14000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-warning contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Madalyn Rascon
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">10-10-2016</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$10000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-primary contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">10-10-2016</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$10000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-primary contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Mitsuko Heid
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-11-2014</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$19000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-info contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-11-2014</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$19000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-info contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Ezequiel Merideth
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2011</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$17500</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-danger contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2011</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$17500</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-danger contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Jonnie Metoyer
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												developer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2016</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$12000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-warning contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2016</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$12000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-warning contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Angelic Lauver
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2016</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$12000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-success contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2016</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$12000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-success contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user2.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Priscila Sandy
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2014</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$12000</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<div class="panel panel-primary contact-card card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<div class="pull-left user-img-wrap mr-15">
-											<img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user"/>
-										</div>
-										<div class="pull-left user-detail-wrap">	
-											<span class="block card-user-name">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2014</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$12000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-primary contact-card card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <div class="pull-left user-img-wrap mr-15">
+                                        <img class="card-user-img img-circle pull-left" src="{{ url_for('static', filename='img/user4.png') }}" alt="user" />
+                                    </div>
+                                    <div class="pull-left user-detail-wrap">
+                                        <span class="block card-user-name">
 												Linda Stack
 											</span>
-											<span class="block card-user-desn">
+                                        <span class="block card-user-desn">
 												designer
 											</span>
-										</div>
-									</div>
-									<div class="pull-right">
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-edit txt-light"></i>
-										</a>
-										<a class="pull-left inline-block mr-15" href="#">
-											<i class="zmdi zmdi-delete txt-light"></i>
-										</a>
-										<div class="pull-left inline-block dropdown">
-											<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
-											<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
-												<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body row">
-										<div class="user-others-details pl-15 pr-15">
-											<div class="mb-15">
-												<i class="zmdi zmdi-email-open inline-block mr-10"></i>
-												<span class="inline-block txt-dark">markh@example.com</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-smartphone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">+01234567890</span>
-											</div>
-											<div class="mb-15">
-												<i class="zmdi zmdi-phone inline-block mr-10"></i>
-												<span class="inline-block txt-dark">1234567890</span>
-											</div>
-											<div>	
-												<i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
-												<span class="inline-block txt-dark">jberincker</span>
-											</div>
-										</div>
-										<hr class="light-grey-hr mt-20 mb-20"/>
-										<div class="emp-detail pl-15 pr-15">
-											<div class="mb-5">
-												<span class="inline-block capitalize-font mr-5">joininig date:</span>
-												<span class="txt-dark">12-10-2014</span>
-											</div>
-											<div>
-												<span class="inline-block capitalize-font mr-5">salery:</span>
-												<span class="txt-dark">$12800</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				
-				<!-- /Row -->
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-edit txt-light"></i>
+                                    </a>
+                                    <a class="pull-left inline-block mr-15" href="#">
+                                        <i class="zmdi zmdi-delete txt-light"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert txt-light"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Full Info</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Send Message</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Follow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row">
+                                    <div class="user-others-details pl-15 pr-15">
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-email-open inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">markh@example.com</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-smartphone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">+01234567890</span>
+                                        </div>
+                                        <div class="mb-15">
+                                            <i class="zmdi zmdi-phone inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">1234567890</span>
+                                        </div>
+                                        <div>
+                                            <i class="zmdi zmdi zmdi-skype inline-block mr-10"></i>
+                                            <span class="inline-block txt-dark">jberincker</span>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr mt-20 mb-20" />
+                                    <div class="emp-detail pl-15 pr-15">
+                                        <div class="mb-5">
+                                            <span class="inline-block capitalize-font mr-5">joininig date:</span>
+                                            <span class="txt-dark">12-10-2014</span>
+                                        </div>
+                                        <div>
+                                            <span class="inline-block capitalize-font mr-5">salery:</span>
+                                            <span class="txt-dark">$12800</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-					
+                <!-- /Row -->
 
-			<!-- Footer -->
-			<footer class="footer container-fluid pl-30 pr-30">
-				<div class="row">
-					<div class="col-sm-12">
-						<p>2019 CWR Data Analytics Bootcamp - Final Project</p>
-					</div>
-				</div>
-			</footer>
-			<!-- /Footer -->
-			
-		
-        <!-- /Main Content -->
 
-  
-    <!-- /#wrapper -->
-	
-	<!-- JavaScript -->
-	
-    <!-- jQuery -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+                <!-- Footer -->
+                <footer class="footer container-fluid pl-30 pr-30">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>2019 CWR Data Analytics Bootcamp - Final Project</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Footer -->
 
-    <!-- Data table JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
-	
-	<!-- Flot Charts JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/excanvas.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.pie.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.resize.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.time.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.stack.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.crosshair.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='full-width-light/dist/js/flot-data.js') }}"></script>
 
-    <!-- Slimscroll JavaScript -->
-    <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
+                <!-- /Main Content -->
 
-    <!-- simpleWeather JavaScript -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='full-width-light/dist/js/simpleweather-data.js') }}"></script>
-	
-	<!-- Progressbar Animation JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
 
-    <!-- EChartJS JavaScript -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendors/echarts-liquidfill.min.js') }}"></script>
+                <!-- /#wrapper -->
 
-    <!-- Progressbar Animation JavaScript -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
+                <!-- JavaScript -->
 
-    <!-- Fancy Dropdown JS -->
-    <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
+                <!-- jQuery -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
 
-    <!-- Sparkline JavaScript -->
-    <!-- <script src="{{ url_for('static', filename='vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script> -->
+                <!-- Bootstrap Core JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
-    <!-- Owl JavaScript -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+                <!-- Data table JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 
-    <!-- Toast JavaScript -->
-    <!-- <script src="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js') }}"></script> -->
+                <!-- Flot Charts JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/excanvas.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.pie.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.resize.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.time.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.stack.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/Flot/jquery.flot.crosshair.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/flot-data.js') }}"></script>
 
-    <!-- Piety JavaScript -->
-    <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='full-width-light/dist/js/peity-data.js') }}"></script>
+                <!-- Slimscroll JavaScript -->
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/jquery.slimscroll.js') }}"></script>
 
-    <!-- Switchery JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
-	
-	<!-- Bootstrap Select JavaScript -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+                <!-- simpleWeather JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/simpleweather-data.js') }}"></script>
 
-    <!-- Init JavaScript -->
-    <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
-    <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js') }}"></script>
+                <!-- Progressbar Animation JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
+
+                <!-- EChartJS JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/echarts-liquidfill.min.js') }}"></script>
+
+                <!-- Progressbar Animation JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
+
+                <!-- Fancy Dropdown JS -->
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/dropdown-bootstrap-extended.js') }}"></script>
+
+                <!-- Sparkline JavaScript -->
+                <!-- <script src="{{ url_for('static', filename='vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script> -->
+
+                <!-- Owl JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+
+                <!-- Toast JavaScript -->
+                <!-- <script src="{{ url_for('static', filename='vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js') }}"></script> -->
+
+                <!-- Piety JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/peity/jquery.peity.min.js') }}"></script>
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/peity-data.js') }}"></script>
+
+                <!-- Switchery JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
+
+                <!-- Bootstrap Select JavaScript -->
+                <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+
+                <!-- Init JavaScript -->
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
+                <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js') }}"></script>
 </body>
 
 </html>
