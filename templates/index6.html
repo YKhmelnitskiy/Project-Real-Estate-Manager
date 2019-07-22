@@ -381,7 +381,7 @@
                             </div>
                             <div class="panel-wrapper collapse in">
                                 <div class="panel-body">
-                                    <div id="map_canvas_2" style="height:500px;"></div>
+                                    <div id="tmap" style="height:500px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -463,12 +463,12 @@
 
 
     <!--Charts for landing page-->
-    <script src="../static/realtime-d3-graph/app.js"></script>
+    <script src="{{ url_for('static', filename='realtime-d3-graph/app.js') }}"></script>
 
     <!--pusher-->
     <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="../static/realtime-d3-graph/server.js"></script>
+    <script src="{{ url_for('static', filename='realtime-d3-graph/server.js') }}"></script>
 
 
     <!-- Map files -->
@@ -480,7 +480,7 @@
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="crossorigin=""></script>
 
     <!-- API key -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}""></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/data.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
