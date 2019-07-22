@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Calendar CSS -->
-		<link href="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- Data table CSS -->
     <link href="{{ url_for('static', filename='vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
@@ -24,6 +24,9 @@
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
+
+    <!--d3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 
 </head>
 
@@ -40,7 +43,7 @@
                 <div class="nav-header pull-left">
                     <div class="logo-wrap">
                         <a href="/index">
-                            <img class="brand-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="brand" />
+                            <img class="brand-img" src="{{ url_for('static', filename='img/logo2.png') }}" width="40" height="40" alt="brand" />
                             <span class="brand-text">RealEZ</span>
                         </a>
                     </div>
@@ -59,9 +62,10 @@
             </div>
             <div id="mobile_only_nav" class="mobile-only-nav pull-right">
                 <ul class="nav navbar-right top-nav pull-right">
-                    
+
                 </ul>
             </div>
+
         </nav>
         <!-- /Top Menu Items -->
 
@@ -79,12 +83,12 @@
                         <div class="clearfix"></div>
                     </a>
                     <ul id="dashboard_dr" class="collapse collapse-level-1">
-                            <li>
-                                <a class="active-page" href="/">General Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="/index">Personal Dashboard</a>
-                            </li>
+                        <li>
+                            <a class="active-page" href="/">General Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/index">Personal Dashboard</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -126,7 +130,7 @@
                         <li>
                             <a href="/file-manager">File Manager</a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li>
@@ -147,7 +151,7 @@
                         <li>
                             <a href="/form-layout">Customer Form</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -161,7 +165,7 @@
                         <li>
                             <a href="/machinelearning">Machine Learning</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
@@ -172,6 +176,16 @@
         <!-- Main Content -->
         <div class="page-wrapper">
             <div class="container-fluid pt-25">
+
+                <!-- Title begins-->
+                <div class="row heading-bg">
+                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12">
+                        <h2 class="text-dark">RealEZ Team Dashboard</h2>
+                    </div>
+                </div>
+
+                <!-- /Title ends-->
+
                 <!-- Row -->
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -292,7 +306,7 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="panel-wrapper collapse in">
-                                <div id="e_chart_1" class="" style="height:350px;"></div>
+                                <div id="chart_landing" class="" style="height:350px;"></div>
                             </div>
                         </div>
                     </div>
@@ -353,23 +367,23 @@
 
                 <!-- Row -->
                 <!--<div class="row">-->
-                        <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="panel panel-default card-view">
-                                        <div class="panel-heading">
-                                            <div class="pull-left">
-                                                <h6 class="panel-title txt-dark">Property Locations</h6>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="panel-wrapper collapse in">
-                                            <div class="panel-body">
-                                                <div id="map_canvas_2" style="height:500px;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">Property Locations</h6>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div id="map_canvas_2" style="height:500px;"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Row -->
             </div>
@@ -399,10 +413,10 @@
     <script src="{{ url_for('static', filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- Calender JavaScripts -->
-	<script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/jquery-ui.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='full-width-light/dist/js/fullcalendar-data.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='full-width-light/dist/js/fullcalendar-data.js') }}"></script>
 
     <!-- Data table JavaScript -->
     <script src="{{ url_for('static', filename='vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
@@ -445,6 +459,15 @@
     <!-- Init JavaScript -->
     <script src="{{ url_for('static', filename='full-width-light/dist/js/init.js') }}"></script>
     <script src="{{ url_for('static', filename='full-width-light/dist/js/dashboard6-data.js') }}"></script>
+
+    <!--Charts for landing page-->
+    <script src="../static/realtime-d3-graph/app.js"></script>
+
+    <!--pusher-->
+    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="../static/realtime-d3-graph/server.js"></script>
+
 </body>
 
 </html>
