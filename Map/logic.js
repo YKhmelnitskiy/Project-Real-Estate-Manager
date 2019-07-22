@@ -150,7 +150,7 @@ var overlayMaps = {
 var myMap = L.map("tmap", {
   center: [41.2633560940593,-81.5724563598633],
   zoom: 10,
-  layers: [streetmap, sales_markers]
+  layers: [light, sales_markers]
 });
 
 // Pass our map layers into our layer control
