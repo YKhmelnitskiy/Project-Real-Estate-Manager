@@ -16,7 +16,8 @@ app = Flask(__name__)
 #Creating database
 #################
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/RealEstate.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/RealEstate.sqlite"
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 db = SQLAlchemy(app)
 #I added this from the pusher ###############
@@ -32,109 +33,20 @@ def shutdown_session(exception=None):
     db_session.remove()
 ######################end of pusher
 
-# class Address(db.Model):
-#     __tablename__ = 'address'
-#     id = db.Column(db.Integer, primary_key=True)
-#     address = db.Column(db.String(64))
-#     bedrooms = db.Column(db.Integer)
-#     bathrooms = db.Column(db.Integer)
-#     area = db.Column(db.Integer)
-#     city = db.Column(db.String(64))
-#     state = db.Column(db.String(64))
-
-#     # def __init__(self, address, bedrooms, bathrooms, area, city, state):
-#     #     self.address = address
-#     #     self.bedrooms = bedrooms
-#     #     self.bathrooms = bathrooms
-#     #     self.area = area
-#     #     self.city = city
-#     #     self.state = state
-
-#     def __repr__(self):
-#         return '<Table %r>' % (self.address)
-
-# class Buyers(db.Model):
-#     __tablename__ = 'buyers_list'
-#     field1 = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(64))
-#     age = db.Column(db.Integer)
-#     price = db.Column(db.Integer)
-#     date = db.Column(db.DateTime)
-#     agent = db.Column(db.String(64))
-
-#     # def __init__(self, name, age, price, date, agent):
-#     #     self.name = name
-#     #     self.age = age
-#     #     self.price = price
-#     #     self.date = date
-#     #     self.agent = agent
-
-#     def __repr__(self):
-#         return '<Table %r>' % (self.name)
-
-# class Pipeline(db.Model):
-#     __tablename__ = 'pipeline_list'
-#     id = db.Column(db.Integer, primary_key=True)
-#     Name = db.Column(db.String(64))
-#     Last_Name = db.Column(db.String(64))
-#     Zip_Code = db.Column(db.Integer)
-#     City = db.Column(db.String)
-#     State = db.Column(db.String(64))
-#     Email = db.Column(db.String(64))
-#     Phone_Number = db.Column(db.String(64))
-#     Company = db.Column(db.String(64))
-#     Title = db.Column(db.String(64))
-#     Last_Contact = db.Column(db.DateTime)
-#     Budget = db.Column(db.Integer)
-#     Agent = db.Column(db.String(64))
-    
-#     # def __init__(self, Name, Last_Name, Zip_Code, City, State, Email, Phone_Number, Company, Title, Last_Contact, Budget, Agent):
-#     #     self.First_Name = Name
-#     #     self.Last_Name = Last_Name
-#     #     self.Zip_Code = Zip_Code
-#     #     self.City = City
-#     #     self.State = State
-#     #     self.Email = Email
-#     #     self.Phone_Number = Phone_Number
-#     #     self.Company = Company
-#     #     self.Title = Title
-#     #     self.Last_Contact = Last_Contact
-#     #     self.Budget = Budget
-#     #     self.Agent = Agent
-
-#     def __repr__(self):
-#         return '<Table %r>' % (self.First_Name)
         
 #############
 #Routes     #
 #############
 
-# @app.before_first_request
-# def setup():
-#     db.create_all()
-    #recreate database each time for demo
-    # db.drop_all
-    
-#@app.route("/Landing_Page")
-#def landing_page():
-#   """Return to the landing page."""
-#   
-#    return render_template("landing_page.html")  
-
-#@app.route("/Dashboard")
-#def dashboard():
-#    """Return to the dashboard."""
-#   
-#    return render_template("dashboard.html")
 @app.route("/")
 def dashboard():
     """Return to the dashboard."""
     # count = db.session.query(func.count(Buyers.field1)).scalar()
     #hi = db.session.query(func.count(Address.id)).scalar()
-    
-    #print (hi)
+    count = Sales.query.count()
+    print (count)
     # return render_template("index6.html", count=count)
-    return render_template("index6.html")
+    return render_template("index6.html",count=count)
 
 # @app.route("/Registration", methods = ["GET", "POST"])
 # def registration():
@@ -156,21 +68,22 @@ def dashboard():
 
 #     return render_template("registration.html")
 
-@app.route('/api/data')
-def list_addresses():
-    results = db.session.query(Address.address, Address.bedrooms, Address.bathrooms, Address.area, Address.city, Address.state).all()
+# @app.route('/api/data')
+# def list_addresses():
+#     results = db.session.query(Sales(seller, buyer, sold_price, closing_date, Type, status, address)).all()
 
-    homes = []
-    for result in results:
-        homes.append({
-            "address": result[0],
-            "bedrooms": result[1],
-            "bathrooms": result[2],
-            "area": result[3],
-            "city": result[4],
-            "state": result[5]
-        })
-    return jsonify(homes)
+#     homes = []
+#     for result in results:
+#         homes.append({
+#             "seller": result[0],
+#             "buyer": result[1],
+#             "sold price": result[2],
+#             "closing date": result[3],
+#             "Type": result[4],
+#             "status": result[5],
+#             "address": result[6]
+#         })
+#     return jsonify(homes)
 
 @app.route("/calendar")
 def calendar():
@@ -231,7 +144,6 @@ def form_layout():
             "Type": Type,
             "status": status, 
             "address": address}
-      
         pusher_client.trigger('table', 'new-record', {'data': data })
         return redirect("/form-layout", code=302)
     else:
