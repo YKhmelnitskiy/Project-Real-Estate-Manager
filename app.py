@@ -207,8 +207,8 @@ def inbox():
 @app.route("/index")
 def index():
     """Return to the index."""
-
-    return render_template("index.html")
+    sales = Sales.query.all()
+    return render_template("index.html", sales = sales)
 
 @app.route("/machinelearning")
 def machine_learning():
