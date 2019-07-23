@@ -535,111 +535,27 @@
                                             <table class="table display product-overview border-none" id="support_table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Contract ID</th>
-                                                        <th>Customer</th>
-                                                        <th>Comment</th>
-                                                        <th>Date</th>
-                                                        <th>Status</th>
-                                                        <th>Actions</th>
+                                                        <th scope="col">Seller</th>
+                                                        <th scope="col">Buyer</th>
+                                                        <th scope="col">Sold_Price</th>
+                                                        <th scope="col">Closing_Date</th>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Address</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>#85457898</td>
-                                                        <td>Jens Brincker</td>
-                                                        <td>Need more options</td>
-                                                        <td>Oct 27</td>
-                                                        <td>
-                                                            <span class="label label-success">done</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
+                                                {% for sale in sales %}
+                                                    <tr id={{ sales.id }}>
+                                                        <th scope="row">{{ sale.seller }}</th>
+                                                        <td> {{sale.buyer }} </td>
+                                                        <td> {{ sale.sold_price }} </td>
+                                                        <td> {{ sale.closing_date }} </td>
+                                                        <td> {{ sale.Type }} </td>
+                                                        <td> {{sale.status }}</td>
+                                                        <td> {{sale.address }}</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>#85457897</td>
-                                                        <td>Mark Hay</td>
-                                                        <td>PSD resolution</td>
-                                                        <td>Oct 26</td>
-                                                        <td>
-                                                            <span class="label label-warning ">Pending</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457896</td>
-                                                        <td>Anthony Davie</td>
-                                                        <td>Prepare contract</td>
-                                                        <td>Oct 25</td>
-                                                        <td>
-                                                            <span class="label label-success ">done</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457895</td>
-                                                        <td>David Perry</td>
-                                                        <td>Reschedule visit</td>
-                                                        <td>Oct 25</td>
-                                                        <td>
-                                                            <span class="label label-danger">pending</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457894</td>
-                                                        <td>Anthony Davie</td>
-                                                        <td>Need contrat</td>
-                                                        <td>Oct 25</td>
-                                                        <td>
-                                                            <span class="label label-success ">done</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457893</td>
-                                                        <td>Alan Gilchrist</td>
-                                                        <td>On hold</td>
-                                                        <td>Oct 22</td>
-                                                        <td>
-                                                            <span class="label label-warning ">Pending</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457892</td>
-                                                        <td>Mark Hay</td>
-                                                        <td>Waiting approval</td>
-                                                        <td>Oct 18</td>
-                                                        <td>
-                                                            <span class="label label-success ">done</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#85457891</td>
-                                                        <td>Sue Woodger</td>
-                                                        <td>Find another property</td>
-                                                        <td>Oct 17</td>
-                                                        <td>
-                                                            <span class="label label-danger">pending</span>
-                                                        </td>
-                                                        <td><a href="javascript:void(0)" class="pr-10" data-toggle="tooltip" title="completed"><i class="zmdi zmdi-check"></i></a>
-                                                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="zmdi zmdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                {% endfor %}
                                                 </tbody>
                                             </table>
                                         </div>
