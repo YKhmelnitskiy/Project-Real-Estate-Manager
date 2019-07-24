@@ -185,7 +185,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="txt-dark block counter"><span class="counter-anim" id="newcustomers"></span></span>
-                                                    <span class="weight-500 uppercase-font block font-13">New Customers</span>
+                                                    <span class="weight-500 uppercase-font block font-13">Total Customers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-user-following data-right-rep-icon txt-light-grey"></i>
@@ -204,7 +204,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="txt-dark block counter"><span class="counter-anim" id="customersleaving"></span></span>
-                                                    <span class="weight-500 uppercase-font block">Customers Leaving</span>
+                                                    <span class="weight-500 uppercase-font block">Total Buyers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-control-rewind data-right-rep-icon txt-light-grey"></i>
@@ -223,7 +223,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left txt-light">
                                                     <span class="block counter" id="propertiessold"><span ></span></span>
-                                                    <span class="weight-500 uppercase-font block">Properties Sold</span>
+                                                    <span class="weight-500 uppercase-font block">Total Sellers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-layers data-right-rep-icon txt-light"></i>
@@ -535,7 +535,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                {% for sale in sales %}
+                                                    {% for sale in sales %}
                                                     <tr id={{ sales.id }}>
                                                         <th scope="row">{{ sale.seller }}</th>
                                                         <td> {{sale.buyer }} </td>
@@ -545,7 +545,7 @@
                                                         <td> {{sale.status }}</td>
                                                         <td> {{sale.address }}</td>
                                                     </tr>
-                                                {% endfor %}
+                                                    {% endfor %}
                                                 </tbody>
                                             </table>
                                         </div>
