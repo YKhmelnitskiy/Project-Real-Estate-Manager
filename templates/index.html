@@ -25,6 +25,10 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='full-width-light/dist/css/style.css') }}" rel="stylesheet" type="text/css">
 
+    <!--d3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+
+
 </head>
 
 <body>
@@ -185,7 +189,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="txt-dark block counter"><span class="counter-anim" id="newcustomers"></span></span>
-                                                    <span class="weight-500 uppercase-font block font-13">New Customers</span>
+                                                    <span class="weight-500 uppercase-font block font-13">Total Customers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-user-following data-right-rep-icon txt-light-grey"></i>
@@ -204,7 +208,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="txt-dark block counter"><span class="counter-anim" id="customersleaving"></span></span>
-                                                    <span class="weight-500 uppercase-font block">Customers Leaving</span>
+                                                    <span class="weight-500 uppercase-font block">Total Buyers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-control-rewind data-right-rep-icon txt-light-grey"></i>
@@ -223,7 +227,7 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left txt-light">
                                                     <span class="block counter" id="propertiessold"><span ></span></span>
-                                                    <span class="weight-500 uppercase-font block">Properties Sold</span>
+                                                    <span class="weight-500 uppercase-font block">Total Sellers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <i class="icon-layers data-right-rep-icon txt-light"></i>
@@ -249,12 +253,12 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 ,mr-5 "></i><span class="weight-500 uppercase-font">Commissions</span></span>
-                                                    <span class="txt-dark block counter" id="commissions">$<span >60</span></span>
+                                                    <span class="txt-dark block counter" id="commissions">$<span >250,000</span></span>
                                                 </div>
 
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 mr-5"></i><span class="weight-500 uppercase-font">Taxes</span></span>
-                                                    <span class="txt-dark block counter" id="taxes">$<span >30</span></span>
+                                                    <span class="txt-dark block counter" id="taxes">$<span >21,000</span></span>
                                                     <!-- <div id="sparkline_1" class="sp-small-chart" ></div> -->
                                                 </div>
                                             </div>
@@ -282,7 +286,7 @@
                                     <ul class="flex-stat mb-10 ml-15">
                                         <li class="text-left auto-width mr-60">
                                             <span class="block">Last Year</span>
-                                            <span class="block txt-dark weight-500 font-18" id="lastyear">$<span>0</span></span>
+                                            <span class="block txt-dark weight-500 font-18" id="lastyear">$<span>3,500,000</span></span>
                                             <span class="block txt-success mt-5">
 													<i class="zmdi zmdi-caret-up pr-5 font-20"></i><span class="weight-500">+15%</span>
                                             </span>
@@ -290,7 +294,7 @@
                                         </li>
                                         <li class="text-left auto-width mr-60">
                                             <span class="block">This Year</span>
-                                            <span class="block txt-dark weight-500 font-18" id="thisyear">$<span>0</span></span>
+                                            <span class="block txt-dark weight-500 font-18" id="thisyear">$<span>3,150,000</span></span>
                                             <span class="block txt-success mt-5">
 													<i class="zmdi zmdi-caret-up pr-5 font-20"></i><span class="weight-500">+4%</span>
                                             </span>
@@ -298,14 +302,14 @@
                                         </li>
                                         <li class="text-left auto-width">
                                             <span class="block">Revenue</span>
-                                            <span class="block txt-dark weight-500 font-18" id="revenue">$<span>0</span></span>
+                                            <span class="block txt-dark weight-500 font-18" id="revenue">$<span>3,800,000</span></span>
                                             <span class="block txt-danger mt-5">
 													<i class="zmdi zmdi-caret-down pr-5 font-20"></i><span class="weight-500">-5%</span>
                                             </span>
                                             <div class="clearfix"></div>
                                         </li>
                                     </ul>
-                                    <div id="e_chart_1" class="" style="height:310px;"></div>
+                                    <div id="personal_dashboard" class="" style="height:310px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -535,7 +539,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                {% for sale in sales %}
+                                                    {% for sale in sales %}
                                                     <tr id={{ sales.id }}>
                                                         <th scope="row">{{ sale.seller }}</th>
                                                         <td> {{sale.buyer }} </td>
@@ -545,7 +549,7 @@
                                                         <td> {{sale.status }}</td>
                                                         <td> {{sale.address }}</td>
                                                     </tr>
-                                                {% endfor %}
+                                                    {% endfor %}
                                                 </tbody>
                                             </table>
                                         </div>
@@ -657,10 +661,13 @@
                 <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="crossorigin=""></script>
             
                 <!-- API key -->
-                <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}""></script>
+                <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
                 <script type="text/javascript" src="{{ url_for('static', filename='js/data2.js') }}"></script>
                 <script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat2.js') }}"></script>
                 <script type="text/javascript" src="{{ url_for('static', filename='js/logic2.js') }}"></script>
+                <!--Charts for landing page-->
+                <script src="{{ url_for ('static', filename='js/app2.js')}}"></script>
+
 </body>
 
 </html>
