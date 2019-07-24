@@ -8,18 +8,18 @@ from database import db_session
 from models import Sales
 from datetime import datetime
 import os
+import numpy as np
+import pickle
+from sklearn.preprocessing import StandardScaler
+import pandas as pd
 #Create our app
+
+model = pickle.load(open('model.pkl','rb'))
 
 app = Flask(__name__)
 
-#################
-#Creating database
-#################
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/RealEstate.sqlite"
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-db = SQLAlchemy(app)
 #I added this from the pusher ###############
 pusher_client = pusher.Pusher(
     app_id="824700",
@@ -210,11 +210,46 @@ def index():
     sales = Sales.query.all()
     return render_template("index.html", sales = sales)
 
-@app.route("/machinelearning")
+@app.route("/machinelearning", methods = ["GET", "POST"])
 def machine_learning():
     """Return to the machinelearning."""
+    
+    if request.method == "POST":
+        medhousing = request.form["medhousing"]
+        bedrooms = request.form["bedrooms"]
+        bathrooms = request.form["bathrooms"]
+        yearbuilt = request.form["yearbuilt"] #sqaure footage
+        acres = request.form["acres"]
+        graduates = request.form["graduates"]
+        foodstamps = request.form["foodstamps"]
 
-    return render_template("machinelearning.html")
+        inputs=[]
+
+        inputs.append(medhousing)
+        inputs.append(bedrooms)
+        inputs.append(bathrooms)
+        inputs.append(yearbuilt)
+        inputs.append(acres)
+        inputs.append(graduates)
+        inputs.append(foodstamps)
+
+        inputs2=list(map(float, inputs))
+
+        print(inputs2)
+
+        X1 = np.array(inputs2)
+        X=X1.reshape(1, -1)
+        prediction= model.predict(X)
+        print(prediction)
+        output = prediction[0]
+        output5=output[0]
+        output6=int(output5)
+        output2= "{:,}".format(output6)
+        print(output2)
+    
+        return render_template("machinelearning.html", output2=output2)  
+
+    return render_template("machinelearning.html", output2="0")    
 
 if __name__ == "__main__": 
     app.run()
