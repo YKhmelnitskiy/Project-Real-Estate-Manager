@@ -23,9 +23,9 @@ app = Flask(__name__)
 
 #I added this from the pusher ###############
 pusher_client = pusher.Pusher(
-    app_id="824700",
-    key="11cb3fcd5df6c3b7e3ba",
-    secret="39f07790b821e7a6fc91",
+    app_id="824705",
+    key="71fa2dc10281921e8d02",
+    secret="65ef961a2937ca58c0f0",
     cluster="us2",
     ssl=True)
 

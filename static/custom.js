@@ -16,7 +16,7 @@ $('.datetime').datetimepicker({
 });
 
 // Initialise Pusher
-const pusher = new Pusher("11cb3fcd5df6c3b7e3ba", {
+const pusher = new Pusher("71fa2dc10281921e8d02", {
     cluster: 'us2',
     encrypted: true
 });
