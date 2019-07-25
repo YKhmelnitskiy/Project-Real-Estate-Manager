@@ -188,7 +188,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim" id="newcustomers"></span></span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim" id="newcustomers"></span>{{info.total_customers}}</span>
                                                     <span class="weight-500 uppercase-font block font-13">Total Customers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
@@ -207,7 +207,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim" id="customersleaving"></span></span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim" id="customersleaving"></span>{{info.total_buyers}}</span>
                                                     <span class="weight-500 uppercase-font block">Total Buyers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
@@ -226,7 +226,7 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left txt-light">
-                                                    <span class="block counter" id="propertiessold"><span ></span></span>
+                                                    <span class="block counter" id="propertiessold"><span ></span>{{info.total_sellers}}</span>
                                                     <span class="weight-500 uppercase-font block">Total Sellers</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
@@ -253,12 +253,12 @@
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
                                                     <span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 ,mr-5 "></i><span class="weight-500 uppercase-font">Commissions</span></span>
-                                                    <span class="txt-dark block counter" id="commissions">$<span >250,000</span></span>
+                                                    <span class="txt-dark block counter" id="commissions">$<span>{{info.commissions}}</span></span>
                                                 </div>
 
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
                                                     <span class="block"><i class="zmdi zmdi-trending-up txt-success font-18 mr-5"></i><span class="weight-500 uppercase-font">Taxes</span></span>
-                                                    <span class="txt-dark block counter" id="taxes">$<span >21,000</span></span>
+                                                    <span class="txt-dark block counter" id="taxes">$<span >{{info.taxes}}</span></span>
                                                     <!-- <div id="sparkline_1" class="sp-small-chart" ></div> -->
                                                 </div>
                                             </div>
@@ -474,7 +474,7 @@
                                                 <i class="zmdi zmdi-collection-folder-image inline-block mr-10 font-16"></i>
                                                 <span class="inline-block txt-dark">Active Properties</span>
                                             </div>
-                                            <span class="inline-block txt-warning pull-right weight-500" id="activeproperties">12</span>
+                                            <span class="inline-block txt-warning pull-right weight-500" id="activeproperties">{{info.active_properties}}</span>
                                             <div class="clearfix"></div>
                                         </div>
                                         <hr class="light-grey-hr mt-0 mb-15" />
@@ -483,7 +483,7 @@
                                                 <i class="zmdi zmdi-format-list-bulleted inline-block mr-10 font-16"></i>
                                                 <span class="inline-block txt-dark">Pending to Close</span>
                                             </div>
-                                            <span class="inline-block txt-danger pull-right weight-500" id="pendingtoclose">23</span>
+                                            <span class="inline-block txt-danger pull-right weight-500" id="pendingtoclose">{{info.pending_properties}}</span>
                                             <div class="clearfix"></div>
                                         </div>
                                         <hr class="light-grey-hr mt-0 mb-15" />
@@ -531,8 +531,8 @@
                                                     <tr>
                                                         <th scope="col">Seller</th>
                                                         <th scope="col">Buyer</th>
-                                                        <th scope="col">Sold_Price</th>
-                                                        <th scope="col">Closing_Date</th>
+                                                        <th scope="col">Sold Price</th>
+                                                        <th scope="col">Closing Date</th>
                                                         <th scope="col">Type</th>
                                                         <th scope="col">Status</th>
                                                         <th scope="col">Address</th>
