@@ -3,6 +3,7 @@
 from flask import Flask, request, jsonify, render_template, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func #Column, Integer, DateTime
+from sqlalchemy.sql import func
 import pusher
 from database import db_session
 from models import Sales
@@ -207,8 +208,34 @@ def inbox():
 @app.route("/index")
 def index():
     """Return to the index."""
+    # for the span tags
+    total_customers = Sales.query.count()
+    total_buyers = Sales.query.filter_by(Type="Buyer").count()
+    total_sellers = Sales.query.filter_by(Type="Seller").count()
+    active_properties = Sales.query.filter_by(status="Active").count()
+    pending_properties = Sales.query.filter_by(status="Pending").count()
+    price1 = db_session.query(func.sum(Sales.sold_price))
+    total = price1[0][0]
+    commissions = round((total * .03),2)
+    taxes = round((total *.4),2)
+    #total_sellers = Sales.query.filter_by(Type="Seller").count()
+    #active_properties = Sales.query.filter_by(status="Active").count()
+    #pending_properties = Sales.query.filter_by(status="Pending").count()
+    # 3% of saleprice
+    # print (total_price)
+    # taxes are 30% of total gros sales
+    info = {
+        "total_customers": total_customers,
+        "total_buyers": total_buyers,
+        "total_sellers": total_sellers,
+        "active_properties": active_properties,
+        "pending_properties": pending_properties,
+        "commissions": commissions,
+        "taxes": taxes
+    }
+    # for the table
     sales = Sales.query.all()
-    return render_template("index.html", sales = sales)
+    return render_template("index.html", info = info, sales = sales)
 
 @app.route("/machinelearning", methods = ["GET", "POST"])
 def machine_learning():
