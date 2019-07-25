@@ -187,6 +187,20 @@
                             </div>
                             <div class="panel-wrapper collapse in">
                                 <div class="panel-body">
+                                        <form method="POST" action="/machinelearning">
+                                            <label for="inputzip">Zipcode</label>
+                                            <input type="text" id="inputzip" name="zipcode">
+                                            <input type="submit" value="submit">
+                                        </form> 
+                                                
+                                            <p>Median House Price is : {{ output3 }}</p>
+                                            <p>% HS Graduates : {{ output4 }}</p>
+                                            <p>% Receiving Food Stamps: {{ output5 }}</p>
+                                            
+                                                    
+                                        <br/> 
+                                        <br/>
+                                        <br/>
                                     <form method="POST" action="/machinelearning">
 
                                         <!--First row of the form begins-->
